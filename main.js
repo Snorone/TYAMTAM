@@ -9,7 +9,8 @@ formEl.addEventListener('submit', event => {
     console.log(userInput);
 
     fetchInfo(userInput)
-        .then(displayMovie)
+        .then(displayMovie);
+    formEl.reset();
 })
 
 
