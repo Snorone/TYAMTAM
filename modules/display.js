@@ -21,9 +21,9 @@ function displayMovie(movie){
                // console.log(genreList);
 
                 genreFetch(genreList)
-                    .then(id =>{
+                    .then(getGenre =>{
                         //console.log(id);
-                        for(const genreArr of id.genres){
+                        for(const genreArr of getGenre.genres){
                             //console.log(genreArr.id);
                             if(genreArr.id === genreList){
                                 console.log(genreArr.name);
@@ -42,9 +42,9 @@ function displayMovie(movie){
 
             for(const genreList of movieList.genre_ids){
                 genreFetch(genreList)
-                    .then(id =>{
+                    .then(getGenre =>{
                         //console.log(id);
-                        for(const genreArr of id.genres){
+                        for(const genreArr of getGenre.genres){
                             //console.log(genreArr.id);
                             if(genreArr.id === genreList){
                                 console.log(genreArr.name);
