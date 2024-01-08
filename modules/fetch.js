@@ -12,7 +12,7 @@ const BAERER_KEY =
 export async function fetchInfo(userSearch) {
   //console.log(userSearch);
   const url = `https://api.themoviedb.org/3/search/multi?query=${userSearch}&include_adult=false&language=en-US&page=1`;
-  console.log(url);
+  //console.log(url);
 
   //   const sectionDiv = document.querySelector("section");
   //   sectionDiv.innerHTML = "";
@@ -43,6 +43,6 @@ export async function genreFetch(){
   const url = `https://api.themoviedb.org/3/genre/movie/list?language=en`;
   const response = await fetch(url,options);
   const data = await response.json();
-  console.log(data);
+  //console.log(data);
   return data;
 }

@@ -1,5 +1,5 @@
 import { genreFetch } from "./fetch.js";
-genreFetch();
+
 const emptyDiv = document.createElement('div');
 
 const imageBaseUrl = `https://image.tmdb.org/t/p/w200/`;
@@ -18,10 +18,21 @@ function displayMovie(movie){
             createGenreElement(movieInfoDiv);
 
             for(const genreList of movieList.genre_ids){
-                console.log(genreList);
-                const genreId = document.createElement('p');
-                genreId.innerText = genreList;
-                movieInfoDiv.append(genreId);
+               // console.log(genreList);
+
+                genreFetch(genreList)
+                    .then(id =>{
+                        //console.log(id);
+                        for(const genreArr of id.genres){
+                            //console.log(genreArr.id);
+                            if(genreArr.id === genreList){
+                                console.log(genreArr.name);
+                                const genreId = document.createElement('p');
+                                genreId.innerText = genreArr.name;
+                                movieInfoDiv.append(genreId);
+                            }
+                        }
+                    })
             }
         }
         if(movieList.media_type === 'tv'){
@@ -30,10 +41,20 @@ function displayMovie(movie){
             createGenreElement(movieInfoDiv);
 
             for(const genreList of movieList.genre_ids){
-                console.log(genreList);
-                const genreId = document.createElement('p');
-                genreId.innerText = genreList;
-                movieInfoDiv.append(genreId);
+                genreFetch(genreList)
+                    .then(id =>{
+                        //console.log(id);
+                        for(const genreArr of id.genres){
+                            //console.log(genreArr.id);
+                            if(genreArr.id === genreList){
+                                console.log(genreArr.name);
+                                const genreId = document.createElement('p');
+                                genreId.innerText = genreArr.name;
+                                movieInfoDiv.append(genreId);
+                            }
+                         
+                        }
+                    })
                 }
         }
         if(movieList.media_type === 'person'){
