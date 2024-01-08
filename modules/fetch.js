@@ -11,8 +11,8 @@ export async function fetchInfo(userSearch) {
       Authorization: `Bearer ${BAERER_KEY}`,
     },
   };
-  const sectionDiv = document.querySelector("section");
-  sectionDiv.innerHTML = "";
+  //   const sectionDiv = document.querySelector("section");
+  //   sectionDiv.innerHTML = "";
   const response = await fetch(url, options);
   if (response.ok) {
     const data = await response.json();
