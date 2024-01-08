@@ -1,6 +1,7 @@
 function displayMovie(){
     const movieInfoDiv = document.createElement('div');
     createAndAppendElement('p','Test Test', movieInfoDiv);
+    
     document.body.append(movieInfoDiv);
 }
 
@@ -13,4 +14,4 @@ function createAndAppendElement(type, content, container){
     return element;
 }
 
-export{displayMovie}
+export{displayMovie};
