@@ -1,7 +1,7 @@
 function displayMovie(){
     const movieInfoDiv = document.createElement('div');
-    createAndAppendElement('p','Test Test', movieInfoDiv);
-    
+    createAndAppendElement('img','Test Test', movieInfoDiv);
+
     document.body.append(movieInfoDiv);
 }
 
