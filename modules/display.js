@@ -12,6 +12,7 @@ function displayMovie(movie){
         else{
             createAndAppendElement('h3',movieList.name,movieInfoDiv);
         }
+        createAndAppendElement('h4','Genre',movieInfoDiv);
 
         document.body.append(movieInfoDiv);
     }
