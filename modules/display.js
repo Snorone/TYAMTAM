@@ -7,34 +7,36 @@ const imageBaseUrl = `https://image.tmdb.org/t/p/w200/`;
 function displayMovie(movie){
     console.log(movie);
     emptyDiv.innerHTML = '';
-    console.log(movie);
     for(const movieList of movie.results){
         const moviePoster = movieList.poster_path;
         const actorPoster = movieList.profile_path;
-        console.log(actorPoster);
         const movieInfoDiv = document.createElement('div');
-        
         
         if(movieList.media_type === 'movie'){
             createAndAppendElement('img', imageBaseUrl+moviePoster,movieInfoDiv);
-
-            
-            if(movieList.media_type === 'person'){
-                genreEl.remove();
-            } 
             createAndAppendElement('h3',movieList.title,movieInfoDiv);
+            createGenreElement(movieInfoDiv);
 
-            const genreEl = document.createElement('h4');
-            genreEl.innerText = 'Genre';
-            movieInfoDiv.append(genreEl);
             for(const genreList of movieList.genre_ids){
-            console.log(genreList);
-            const genreId = document.createElement('p');
-            genreId.innerText = genreList;
-            movieInfoDiv.append(genreId);
+                console.log(genreList);
+                const genreId = document.createElement('p');
+                genreId.innerText = genreList;
+                movieInfoDiv.append(genreId);
+            }
         }
+        if(movieList.media_type === 'tv'){
+            createAndAppendElement('img', imageBaseUrl+moviePoster,movieInfoDiv);
+            createAndAppendElement('h3',movieList.name,movieInfoDiv);
+            createGenreElement(movieInfoDiv);
+
+            for(const genreList of movieList.genre_ids){
+                console.log(genreList);
+                const genreId = document.createElement('p');
+                genreId.innerText = genreList;
+                movieInfoDiv.append(genreId);
+                }
         }
-        else if(movieList.media_type === 'person' || movieList.media_type === 'tv'){
+        if(movieList.media_type === 'person'){
             createAndAppendElement('img', imageBaseUrl+actorPoster,movieInfoDiv);
             createAndAppendElement('h3',movieList.name,movieInfoDiv);
         }
@@ -42,6 +44,12 @@ function displayMovie(movie){
         emptyDiv.append(movieInfoDiv);
         document.body.append(emptyDiv);
     }
+}
+
+function createGenreElement(movieInfoDiv){
+    const genreEl = document.createElement('h4');
+    genreEl.innerText = 'Genre';
+    movieInfoDiv.append(genreEl);
 }
 
 function createAndAppendElement(type, content, container){
