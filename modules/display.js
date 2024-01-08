@@ -17,26 +17,28 @@ function displayMovie(movie){
         
         if(movieList.media_type === 'movie'){
             createAndAppendElement('img', imageBaseUrl+moviePoster,movieInfoDiv);
+
+            
+            if(movieList.media_type === 'person'){
+                genreEl.remove();
+            } 
             createAndAppendElement('h3',movieList.title,movieInfoDiv);
+
+            const genreEl = document.createElement('h4');
+            genreEl.innerText = 'Genre';
+            movieInfoDiv.append(genreEl);
             for(const genreList of movieList.genre_ids){
-                console.log(genreList);
-                const genreId = document.createElement('p');
-                genreId.innerText = genreList;
-                movieInfoDiv.append(genreId);
-            }
+            console.log(genreList);
+            const genreId = document.createElement('p');
+            genreId.innerText = genreList;
+            movieInfoDiv.append(genreId);
+        }
         }
         else if(movieList.media_type === 'person' || movieList.media_type === 'tv'){
             createAndAppendElement('img', imageBaseUrl+actorPoster,movieInfoDiv);
             createAndAppendElement('h3',movieList.name,movieInfoDiv);
         }
 
-        const genreEl = document.createElement('h4');
-        genreEl.innerText = 'Genre';
-        movieInfoDiv.append(genreEl);
-        if(movieList.media_type === 'person'){
-            genreEl.remove();
-        }   
-    
         emptyDiv.append(movieInfoDiv);
         document.body.append(emptyDiv);
     }
