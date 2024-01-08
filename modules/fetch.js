@@ -4,6 +4,7 @@ const BAERER_KEY =
 export async function fetchInfo(userSearch) {
   console.log(userSearch);
   const url = `https://api.themoviedb.org/3/search/multi?query=${userSearch}&include_adult=false&language=en-US&page=1`;
+  console.log(url);
 
   const options = {
     method: "GET",
@@ -17,6 +18,8 @@ export async function fetchInfo(userSearch) {
   const response = await fetch(url, options);
   if (response.ok) {
     const data = await response.json();
+    console.log(data);
+
     if (data.results.length == 0) {
       //   const sectionDiv = document.querySelector("section");
 
