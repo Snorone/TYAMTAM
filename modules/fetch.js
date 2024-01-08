@@ -1,11 +1,5 @@
 const BAERER_KEY =
   "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhMmEzMGUzMDUxNDk2MzYzMGIzZjBmMTFlNDVjZmZlZiIsInN1YiI6IjY1ODAwNTQ0MGU2NGFmMDgzOWE4NTY2YiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.mXFG31A3Gc9TIa9a-tDRXc2PwfYME01u_gmyEt5ipL4";
-
-export async function fetchInfo(userSearch) {
-  console.log(userSearch);
-  const url = `https://api.themoviedb.org/3/search/multi?query=${userSearch}&include_adult=false&language=en-US&page=1`;
-  console.log(url);
-
   const options = {
     method: "GET",
     headers: {
@@ -13,12 +7,19 @@ export async function fetchInfo(userSearch) {
       Authorization: `Bearer ${BAERER_KEY}`,
     },
   };
+
+
+export async function fetchInfo(userSearch) {
+  //console.log(userSearch);
+  const url = `https://api.themoviedb.org/3/search/multi?query=${userSearch}&include_adult=false&language=en-US&page=1`;
+  console.log(url);
+
   //   const sectionDiv = document.querySelector("section");
   //   sectionDiv.innerHTML = "";
   const response = await fetch(url, options);
   if (response.ok) {
     const data = await response.json();
-    console.log(data);
+    //console.log(data);
 
     if (data.results.length == 0) {
       //   const sectionDiv = document.querySelector("section");
@@ -37,4 +38,11 @@ export async function fetchInfo(userSearch) {
     }
     return data;
   }
+}
+export async function genreFetch(){
+  const url = `https://api.themoviedb.org/3/genre/movie/list?language=en`;
+  const response = await fetch(url,options);
+  const data = await response.json();
+  console.log(data);
+  return data;
 }
