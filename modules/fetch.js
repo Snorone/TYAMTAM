@@ -3,7 +3,7 @@ const BAERER_KEY =
 
 export async function fetchInfo(userSearch) {
   console.log(userSearch);
-  url = `https://api.themoviedb.org/3/search/multi?query=${userSearch}&include_adult=false&language=en-US&page=1`;
+  const url = `https://api.themoviedb.org/3/search/multi?query=${userSearch}&include_adult=false&language=en-US&page=1`;
 
   const options = {
     method: "GET",
