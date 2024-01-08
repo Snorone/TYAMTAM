@@ -12,14 +12,27 @@ function displayMovie(movie){
         const actorPoster = movieList.profile_path;
         const movieInfoDiv = document.createElement('div');
         
-        if(movieList.media_type === 'movie'){
-            createAndAppendElement('img', imageBaseUrl+moviePoster,movieInfoDiv);
-            createAndAppendElement('h3',movieList.title,movieInfoDiv);
-            createGenreElement(movieInfoDiv);
+        if(movieList.media_type === 'movie' || movieList.media_type === 'tv' ){
+            if(moviePoster !== null){
+                createAndAppendElement('img', imageBaseUrl+moviePoster,movieInfoDiv);
+                if(movieList.media_type === 'movie'){
+                    createAndAppendElement('h3',movieList.title,movieInfoDiv);
+                }
+                if(movieList.media_type === 'tv'){
+                    createAndAppendElement('h3',movieList.name,movieInfoDiv);
+                }
+                createGenreElement(movieInfoDiv);
+           }
+            else{
+                const whenIsNoImage = `./assets/no_image.svg`;
+                console.log(whenIsNoImage);
+                createNoImageElement(whenIsNoImage,movieInfoDiv);
+                createAndAppendElement('h3',movieList.title,movieInfoDiv);
+                createGenreElement(movieInfoDiv);
+            }
 
             for(const genreList of movieList.genre_ids){
                // console.log(genreList);
-
                 genreFetch(genreList)
                     .then(getGenre =>{
                         //console.log(id);
@@ -35,36 +48,29 @@ function displayMovie(movie){
                     })
             }
         }
-        if(movieList.media_type === 'tv'){
-            createAndAppendElement('img', imageBaseUrl+moviePoster,movieInfoDiv);
-            createAndAppendElement('h3',movieList.name,movieInfoDiv);
-            createGenreElement(movieInfoDiv);
 
-            for(const genreList of movieList.genre_ids){
-                genreFetch(genreList)
-                    .then(getGenre =>{
-                        //console.log(id);
-                        for(const genreArr of getGenre.genres){
-                            //console.log(genreArr.id);
-                            if(genreArr.id === genreList){
-                                console.log(genreArr.name);
-                                const genreId = document.createElement('p');
-                                genreId.innerText = genreArr.name;
-                                movieInfoDiv.append(genreId);
-                            }
-                         
-                        }
-                    })
-                }
-        }
         if(movieList.media_type === 'person'){
-            createAndAppendElement('img', imageBaseUrl+actorPoster,movieInfoDiv);
-            createAndAppendElement('h3',movieList.name,movieInfoDiv);
+            if(actorPoster !== null){
+                createAndAppendElement('img', imageBaseUrl+actorPoster,movieInfoDiv);
+                createAndAppendElement('h3',movieList.name,movieInfoDiv);
+            }
+            else{
+                const whenIsNoImage = `./assets/no_image.svg`;
+                console.log(whenIsNoImage);
+                createNoImageElement(whenIsNoImage,movieInfoDiv);
+                createAndAppendElement('h3',movieList.name,movieInfoDiv);
+                
+            }
         }
 
         emptyDiv.append(movieInfoDiv);
         document.body.append(emptyDiv);
     }
+}
+function createNoImageElement(image, append){
+    const noImage = document.createElement('img');
+    noImage.src = image;
+    append.append(noImage);
 }
 
 function createGenreElement(movieInfoDiv){
