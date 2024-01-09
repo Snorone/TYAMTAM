@@ -12,3 +12,9 @@ formEl.addEventListener('submit', event => {
     formEl.reset();
 })
 
+const randomBtn = document.querySelector('#randomBtn');
+randomBtn.addEventListener('click', ()=>{
+    const randomNumber = Math.floor(Math.random()*1000);
+    console.log(randomNumber);
+})
+
