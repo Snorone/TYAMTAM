@@ -1,8 +1,7 @@
 import { genreFetch } from "./fetch.js";
 
 const emptyDiv = document.createElement('div');
-
-const imageBaseUrl = `https://image.tmdb.org/t/p/w200/`;
+const imageBaseUrl = `https://image.tmdb.org/t/p/w400/`;
 
 function displayMovie(movie){
     console.log(movie);
