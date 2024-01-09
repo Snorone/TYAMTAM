@@ -55,10 +55,10 @@ function displayMovie(movie){
             }
             else{
                 const whenIsNoImage = `./assets/no_image.svg`;
+                whenIsNoImage.id = 'noImageStyle';
                 console.log(whenIsNoImage);
                 createNoImageElement(whenIsNoImage,movieInfoDiv);
-                createAndAppendElement('h3',movieList.name,movieInfoDiv);
-                
+                createAndAppendElement('h3',movieList.name,movieInfoDiv);       
             }
         }
 
