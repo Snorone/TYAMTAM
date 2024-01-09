@@ -12,8 +12,9 @@ export async function fetchInfo(userSearch, randomPage) {
   //console.log(userSearch);
   let url = `https://api.themoviedb.org/3/search/multi?query=${userSearch}&include_adult=false&language=en-US&page=1`;
 
-  if (userSearch == "randomBtn") {
+  if (userSearch === "randomBtn") {
     url = `https://api.themoviedb.org/3/movie/popular?language=en-US&page=${randomPage}`;
+    console.log(url);
   }
   console.log(url);
 
