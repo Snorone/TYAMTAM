@@ -9,7 +9,8 @@ const options = {
 };
 
 export async function fetchInfo(userSearch, randomPage) {
-  //console.log(userSearch);
+  console.log(userSearch);
+  console.log(randomPage);
   let url = `https://api.themoviedb.org/3/search/multi?query=${userSearch}&include_adult=false&language=en-US&page=1`;
 
   if (userSearch === "randomBtn") {
@@ -29,6 +30,16 @@ export async function fetchInfo(userSearch, randomPage) {
     }
     return data;
   }
+}
+
+export async function randomFetch(userSearch) {
+  console.log(userSearch);
+  const url = `https://api.themoviedb.org/3/movie/popular?language=en-US&page=${userSearch}`;
+  console.log(url);
+  const response = await fetch(url, options);
+  const data = await response.json();
+  //console.log(data);
+  return data;
 }
 
 export async function genreFetch() {

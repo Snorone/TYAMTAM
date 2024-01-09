@@ -52,7 +52,6 @@ function displayMovie(movie) {
         createAndAppendElement("h3", movieList.name, movieInfoDiv);
       } else {
         const whenIsNoImage = `./assets/no_image.svg`;
-        whenIsNoImage.id = "noImageStyle";
         console.log(whenIsNoImage);
         createNoImageElement(whenIsNoImage, movieInfoDiv);
         createAndAppendElement("h3", movieList.name, movieInfoDiv);
@@ -64,20 +63,26 @@ function displayMovie(movie) {
   }
 }
 export function displayRandomMovie(movie) {
-  console.log(movie.results[0]);
-  const randomNumber = Math.floor(Math.random() * 20);
-  const movieInfoDiv = document.createElement("div");
-  document.body.append(movieInfoDiv);
-  const imgEl = document.createElement("img");
-  imgEl.src = imageBaseUrl + movie.results[`${randomNumber}`].poster_path;
-  movieInfoDiv.append.imgEl;
-  console.log(imgEl);
-
-  //   createAndAppendElement(
-  //     "img",
-  //     imageBaseUrl + movie.results[`${randomNumber}`].poster_path,
-  //     movieInfoDiv
-  //   );
+    emptyDiv.innerHTML = "";
+    // console.log(movie.results[0]);
+    const randomNumber = Math.floor(Math.random() * 20);
+    console.log(randomNumber);
+    const movieInfoDiv = document.createElement("div");
+    // document.body.append(movieInfoDiv);
+    // const imgEl = document.createElement("img");
+    // imgEl.src = imageBaseUrl + movie.results[`${randomNumber}`].poster_path;
+    // movieInfoDiv.append.imgEl;
+    // console.log(imgEl.src);
+    console.log(movie.results[`${randomNumber}`]);
+    createAndAppendElement('img',imageBaseUrl + movie.results[`${randomNumber}`].poster_path, movieInfoDiv);
+    createAndAppendElement('h3', movie.results[`${randomNumber}`].title,movieInfoDiv);
+    emptyDiv.append(movieInfoDiv);
+    document.body.append(emptyDiv);
+    //   createAndAppendElement(
+    //     "img",
+    //     imageBaseUrl + movie.results[`${randomNumber}`].poster_path,
+    //     movieInfoDiv
+    //   );
 }
 
 function createNoImageElement(image, append) {
