@@ -73,16 +73,36 @@ export function displayRandomMovie(movie) {
     // imgEl.src = imageBaseUrl + movie.results[`${randomNumber}`].poster_path;
     // movieInfoDiv.append.imgEl;
     // console.log(imgEl.src);
-    console.log(movie.results[`${randomNumber}`]);
-    createAndAppendElement('img',imageBaseUrl + movie.results[`${randomNumber}`].poster_path, movieInfoDiv);
-    createAndAppendElement('h3', movie.results[`${randomNumber}`].title,movieInfoDiv);
-    emptyDiv.append(movieInfoDiv);
-    document.body.append(emptyDiv);
+  
     //   createAndAppendElement(
     //     "img",
     //     imageBaseUrl + movie.results[`${randomNumber}`].poster_path,
     //     movieInfoDiv
     //   );
+
+
+    console.log(movie.results[`${randomNumber}`]);
+    createAndAppendElement('img',imageBaseUrl + movie.results[`${randomNumber}`].poster_path, movieInfoDiv);
+    createAndAppendElement('h3', movie.results[`${randomNumber}`].title,movieInfoDiv);
+    createAndAppendElement('p', movie.results[`${randomNumber}`].overview,movieInfoDiv)
+    createGenreElement(movieInfoDiv);
+    for (const genreList of movie.results[`${randomNumber}`].genre_ids) {
+        // console.log(genreList);
+        genreFetch(genreList).then((getGenre) => {
+          //console.log(id);
+          for (const genreArr of getGenre.genres) {
+            //console.log(genreArr.id);
+            if (genreArr.id === genreList) {
+              //   console.log(genreArr.name);
+              const genreId = document.createElement("p");
+              genreId.innerText = genreArr.name;
+              movieInfoDiv.append(genreId);
+            }
+          }
+        });
+      }
+    emptyDiv.append(movieInfoDiv);
+    document.body.append(emptyDiv);
 }
 
 function createNoImageElement(image, append) {
