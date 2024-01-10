@@ -1,3 +1,15 @@
+@media screen and (min-width: 401px) {
+  #menuToggle {
+    display: none;
+  }
+  #menuToggle span {
+    opacity: 0;
+  }
+  #menu {
+    display: none;
+  }
+}
+
 body {
   font-family: "Avenir Next", "Avenir", sans-serif;
   overflow-x: hidden; /* needed because hiding the menu on the right side is not perfect,  */
@@ -5,10 +17,6 @@ body {
 main {
   text-align: center;
   margin: 0 auto;
-}
-.headTitle {
-  padding-top: 100px;
-  text-align: center;
 }
 
 #randomBtn {
@@ -20,10 +28,6 @@ main {
   background: linear-gradient(0deg, #eb5732 0%, #eb5732 100%);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   margin: 10px 0;
-}
-
-.button-42:hover {
-  box-shadow: rgba(253, 76, 0, 0.5) 0 3px 8px;
 }
 
 a {
@@ -60,7 +64,7 @@ a:hover {
   cursor: pointer;
 
   opacity: 0; /* hide this */
-  z-index: 2; /* and place it over the hamburger */
+  z-index: 6; /* and place it over the hamburger */
 
   -webkit-touch-callout: none;
 }
@@ -79,7 +83,7 @@ a:hover {
   border-radius: 3px;
   /* color: #ffffff; */
 
-  z-index: 1;
+  z-index: 5;
 
   transform-origin: 4px 0px;
 
