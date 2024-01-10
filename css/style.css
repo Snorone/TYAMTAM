@@ -1,9 +1,32 @@
-body {
+*{
     margin: 0;
     padding: 0;
 }
+
 
 img{
     width: 400px;
 }
 
+header{
+    width: 100vw;
+    height: 40px;
+    background-color: #D63D41;
+}
+
+footer{
+    width: 100vw;
+    height: 50px;
+    background-color: #53373C;
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.socialMedia{
+    scale: 1/1;
+    width: 30px;
+}
