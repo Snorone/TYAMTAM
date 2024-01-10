@@ -10,7 +10,7 @@ main {
   padding-top: 100px;
   text-align: center;
 }
-.random-container {
+/* .random-container {
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-around;
@@ -22,7 +22,7 @@ main {
   position: relative;
 }
 .cover-text {
-  position: absolute;
+  position: relative;
   bottom: 27%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -31,7 +31,7 @@ main {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-}
+} */
 
 #randomBtn {
   background-color: initial;
@@ -57,7 +57,7 @@ main {
   -webkit-user-select: none;
   vertical-align: top;
   white-space: nowrap;
-  z-index: 9;
+  z-index: 0;
   border: 0;
   transition: box-shadow 0.2s;
 }
@@ -175,7 +175,7 @@ a:hover {
   padding-top: 100px;
   right: -100px;
   border-radius: 0px 0px 0px 10px;
-
+  z-index: 1;
   background: #eb5732;
   border: 1px solid #fff;
   list-style-type: none;
