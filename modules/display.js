@@ -69,14 +69,25 @@ function displayMovie(movie) {
 export function displayRandomTopRated(movie){
     flexContainerEl.innerHTML = "";
     console.log(movie);
-    for(const movieList of movie.results){
+
+    for(let i = 0; i < 5 ; i++){
+        console.log(i);
         const movieInfoDiv = document.createElement("div");
-        const moviePoster = movieList.poster_path;
-        console.log(movieList);
+        const moviePoster = movie.results[i].poster_path;
+        console.log(moviePoster);
         createAndAppendElement('img',imageBaseUrl +moviePoster, movieInfoDiv);
+        createAndAppendElement('h3', movie.results[i].title, movieInfoDiv);
         flexContainerEl.append(movieInfoDiv);
         mainDivEl.append(flexContainerEl);
     }
+    // for(const movieList of movie.results){
+    //     const movieInfoDiv = document.createElement("div");
+    //     const moviePoster = movieList.poster_path;
+    //     console.log(movieList);
+    //     createAndAppendElement('img',imageBaseUrl +moviePoster, movieInfoDiv);
+    //     flexContainerEl.append(movieInfoDiv);
+    //     mainDivEl.append(flexContainerEl);
+    // }
 
 }
 

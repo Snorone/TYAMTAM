@@ -17,33 +17,7 @@ formEl.addEventListener("submit", (event) => {
 	event.preventDefault();
 	fetchInfo(userInput).then(displayMovie);
 	formEl.reset();
-
-	let footer = document.querySelector("footer").style.position = "relative";
-
-	//   fetchInfo(userInput)
-	//     .then((responseObject) => {
-	//     console.log(responseObject);
-	//     displayMovie(responseObject);
-	//     formEl.reset();
-	//   });
 });
-
-// const randomBtn = document.querySelector("#randomBtn");
-// randomBtn.addEventListener("click", (event) => {
-//   event.preventDefault();
-
-//   const randomPage = Math.floor(Math.random() * 10)+1;
-//   console.log(randomPage);
-//   randomFetch(randomPage)
-//     .then(displayRandomMovie)
-// //   fetchInfo(event.target.id, randomPage).then((response) => {
-// //     // console.log(response, "response eller object");
-// //     displayRandomMovie(response);
-// //   });
-
-// //   console.log(randomNumber);
-//   console.log(randomPage);
-// });
 
 function darkMode() {
 	const darkMode = document.body;
