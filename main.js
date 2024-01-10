@@ -27,3 +27,8 @@ darkModeBtn.addEventListener("click", (event) => {
 	darkMode();
 	event.preventDefault();
 });
+
+//menyburgare. Problem att fungera dock//
+document.getElementById('menuIcon').addEventListener('click', () => {
+	document.getElementById('menuList').classList.add('show');
+  });

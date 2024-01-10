@@ -139,3 +139,58 @@ a:hover {
     display: none;
   }
 }
+
+/*test för meny - Andre*/
+.menuList {
+  list-style: none;
+  display: flex;
+}
+
+.menuList li {
+  margin-right: 20px;
+}
+
+.menuList a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.menuIcon {
+  cursor: pointer;
+  display: none;
+}
+
+.burgerLine {
+  width: 30px;
+  height: 4px;
+  background-color: white;
+  margin: 6px 0;
+}
+
+@media screen and (max-width: 800px) {
+  .menuList {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #d63d41;
+    text-align: center;
+  }
+
+  .menuList.show {
+    display: flex;
+  }
+
+  .menuList li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .menuIcon {
+    display: block;
+  }
+}
+/*slut på meny*/
