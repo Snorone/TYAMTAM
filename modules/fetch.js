@@ -8,9 +8,10 @@ const options = {
   },
 };
 
+
+
 export async function fetchInfo(userSearch, randomPage) {
   console.log(userSearch);
-  console.log(randomPage);
   let url = `https://api.themoviedb.org/3/search/multi?query=${userSearch}&include_adult=false&language=en-US&page=1`;
 
   // if (userSearch === "randomBtn") {
@@ -18,20 +19,20 @@ export async function fetchInfo(userSearch, randomPage) {
   //   console.log(url);
   // }
   // console.log(url);
-
-
   const mainDivEl = document.querySelector('#mainContainer');
-  const flexContainerEl = document.querySelector('#flexContainer');
+  // const flexContainerEl = document.querySelector('#flexContainer');
+  mainDivEl.innerHTML = '';
 
   const response = await fetch(url, options);
   if (response.ok) {
     const data = await response.json();
     // console.log(data);
     if (data.results.length == 0) {
+      console.log('hej');
       const h2El = document.createElement("h2");
       h2El.innerText = "No matches to your search result";
-      flexContainerEl.append(h2El);
-      mainDivEl.append(flexContainerEl);
+      mainDivEl.append(h2El);
+
     }
     return data;
   }
