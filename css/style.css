@@ -194,3 +194,24 @@ a:hover {
   }
 }
 /*slut på meny*/
+
+
+/* Tons ändring */
+/* Denna style är för about us sidan */
+.profilePic{
+  border-radius: 50%;
+  width: 200px;
+  margin-top: 20px;
+}
+.profileDiv{
+  text-align: center;
+  padding: 20px;
+}
+.profileDiv h2{
+  margin-top: 10px;
+}
+#aboutUs_container{
+  display: flex;
+  flex-wrap: wrap;
+}
+
