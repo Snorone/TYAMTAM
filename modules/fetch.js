@@ -36,9 +36,15 @@ export async function fetchInfo(userSearch, randomPage) {
   }
 }
 
-// export async function randomTopRatedFetch(){
-
-// }
+export async function randomTopRatedFetch(randomPage){
+  console.log(randomPage);
+  const url = `https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=${randomPage}`;
+  console.log(url);
+  const response = await fetch(url, options);
+  const data = await response.json();
+  //console.log(data);
+  return data;
+}
 export async function randomFetch(userSearch) {
   console.log(userSearch);
   const url = `https://api.themoviedb.org/3/movie/popular?language=en-US&page=${userSearch}`;
