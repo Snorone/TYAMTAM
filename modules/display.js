@@ -62,7 +62,7 @@ function displayMovie(movie) {
     }
 
     flexContainerEl.append(movieInfoDiv);
-    mainDivEl.append(emptyDiv);
+    mainDivEl.append(flexContainerEl);
   }
 }
 export function displayRandomMovie(movie) {
