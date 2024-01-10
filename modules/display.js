@@ -66,23 +66,11 @@ function displayMovie(movie) {
   }
 }
 export function displayRandomMovie(movie) {
-    emptyDiv.innerHTML = "";
+    flexContainerEl.innerHTML = "";
     // console.log(movie.results[0]);
     const randomNumber = Math.floor(Math.random() * 20);
     console.log(randomNumber);
     const movieInfoDiv = document.createElement("div");
-    // document.body.append(movieInfoDiv);
-    // const imgEl = document.createElement("img");
-    // imgEl.src = imageBaseUrl + movie.results[`${randomNumber}`].poster_path;
-    // movieInfoDiv.append.imgEl;
-    // console.log(imgEl.src);
-  
-    //   createAndAppendElement(
-    //     "img",
-    //     imageBaseUrl + movie.results[`${randomNumber}`].poster_path,
-    //     movieInfoDiv
-    //   );
-
 
     console.log(movie.results[`${randomNumber}`]);
     createAndAppendElement('img',imageBaseUrl + movie.results[`${randomNumber}`].poster_path, movieInfoDiv);
@@ -104,8 +92,8 @@ export function displayRandomMovie(movie) {
           }
         });
       }
-    emptyDiv.append(movieInfoDiv);
-    document.body.append(emptyDiv);
+      flexContainerEl.append(movieInfoDiv);
+      mainDivEl.append(flexContainerEl);
 }
 
 function createNoImageElement(image, append) {

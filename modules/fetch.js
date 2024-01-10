@@ -13,11 +13,11 @@ export async function fetchInfo(userSearch, randomPage) {
   console.log(randomPage);
   let url = `https://api.themoviedb.org/3/search/multi?query=${userSearch}&include_adult=false&language=en-US&page=1`;
 
-  if (userSearch === "randomBtn") {
-    url = `https://api.themoviedb.org/3/movie/popular?language=en-US&page=${randomPage}`;
-    console.log(url);
-  }
-  console.log(url);
+  // if (userSearch === "randomBtn") {
+  //   url = `https://api.themoviedb.org/3/movie/popular?language=en-US&page=${randomPage}`;
+  //   console.log(url);
+  // }
+  // console.log(url);
 
   const response = await fetch(url, options);
   if (response.ok) {
