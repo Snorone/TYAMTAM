@@ -1,63 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <script src="./main.js" type="module"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./main.js" type="module"></script>
+    <link rel="stylesheet" href="./css/darkmode.css" />
 
-        <!--Vad är detta?-->
-        <link rel="shortcut icon" href="#" type="image/x-icon" />
+    <!--Vad är detta?-->
+    <link rel="shortcut icon" href="#" type="image/x-icon" />
 
-        <link rel="stylesheet" href="./css/style.css">
-        <title>Movie Database</title>
-    </head>
-    <body>
-      <header>
-        <div id="logo">
-            <a href="index.html"><img src="" alt=""></a>
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Movie Database</title>
+  </head>
+  <body>
+    <header>
+      <div id="logo">
+        <a href="index.html"><img src="" alt="" /></a>
+      </div>
+      <nav>
+        <div class="menuIcon" id="menuIcon">
+          <div class="burgerLine"></div>
+          <div class="burgerLine"></div>
+          <div class="burgerLine"></div>
         </div>
-        <nav>
-            <div class="menuIcon" id="menuIcon">
-              <div class="burgerLine"></div>
-              <div class="burgerLine"></div>
-              <div class="burgerLine"></div>
-            </div>
-            <ul class="menuList" id="menuList">
-              <li><a href="./index.html">Home</a></li>
-              <li><a href="./random.html">Random</a></li>
-              <li><a href="./about.html">About us</a></li>
-              <li><a href="./contact.html">Contact</a></li>
-            </ul>
-        </nav>
-        
+        <ul class="menuList" id="menuList">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./random.html">Random</a></li>
+          <li><a href="./about.html">About us</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </header>
-        <main>
-          <div class="cover-box">
-            <img src="./assets/Img _Cover efter sida_.png" class="coverImg" alt="" />
-            <h1 class="cover-text">Search movies</h1>
-          </div>
-            <form>
-              
-            <div class="inputDiv">
-              <input type="text" id="userInput" placeholder=" search for a person or movie!" />
-              <br>
-              <button class="searchBtn">Search</button>
-            </div>
-            </form>
-            <!--divar som ska containa bilder och titlar av sökresultat här?-->
-        </main>
-
-        <div id="mainContainer"> <!--Inneahåller flex container-->
-          <div id="flexContainer"></div> <!--Filmer kommer att visas här-->
+    <main>
+      <div class="cover-box">
+        <img
+          src="./assets/Img _Cover efter sida_.png"
+          class="coverImg"
+          alt=""
+        />
+        <h1 class="cover-text">Search movies</h1>
+      </div>
+      <form>
+        <div class="inputDiv">
+          <input
+            type="text"
+            id="userInput"
+            placeholder=" search for a person or movie!"
+          />
+          <br />
+          <button class="searchBtn">Search</button>
         </div>
+      </form>
+      <!--divar som ska containa bilder och titlar av sökresultat här?-->
+    </main>
 
-      <footer>
-        <div class="socialMediaDiv">
-            <a href=""><img class="socialMedia" src="./assets/Mask group-1.svg" alt="X"></a>
-            <a href=""><img class="socialMedia" src="./assets/Mask group-2.svg" alt="Facebook"></a>
-            <a href=""><img class="socialMedia" src="./assets/Mask group-3.svg" alt="Instagram"></a>
-            <a href=""><img class="socialMedia" src="./assets/Mask group.svg" alt="Github"></a>
-          </div>
-      </footer>
-    </body>
+    <div id="mainContainer">
+      <!--Inneahåller flex container-->
+      <div id="flexContainer"></div>
+      <!--Filmer kommer att visas här-->
+    </div>
+
+    <footer>
+      <div class="socialMediaDiv">
+        <a href=""
+          ><img class="socialMedia" src="./assets/Mask group-1.svg" alt="X"
+        /></a>
+        <a href=""
+          ><img
+            class="socialMedia"
+            src="./assets/Mask group-2.svg"
+            alt="Facebook"
+        /></a>
+        <a href=""
+          ><img
+            class="socialMedia"
+            src="./assets/Mask group-3.svg"
+            alt="Instagram"
+        /></a>
+        <a href=""
+          ><img class="socialMedia" src="./assets/Mask group.svg" alt="Github"
+        /></a>
+        <label class="switch">
+          <input type="checkbox" />
+          <span class="slider round"></span>
+        </label>
+      </div>
+    </footer>
+  </body>
 </html>
