@@ -1,6 +1,11 @@
 /* #dark-mode-btn{
     
 } */
-.dark-mode {
+.dark-body {
 	background-color: darkgray;
+	color: white;
+}
+.dark-main {
+	background-color: lightgrey;
+	color: white;
 }

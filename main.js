@@ -4,12 +4,9 @@ import { fetchInfo } from "./modules/fetch.js";
 // import { randomFetch } from "./modules/fetch.js";
 import { randomTopRatedFetch } from "./modules/fetch.js";
 
-const randomPage = Math.floor(Math.random() * 20)+1;
+const randomPage = Math.floor(Math.random() * 20) + 1;
 console.log(randomPage);
-randomTopRatedFetch(randomPage)
-    .then(displayRandomTopRated);
-
-
+randomTopRatedFetch(randomPage).then(displayRandomTopRated);
 
 const formEl = document.querySelector("form");
 formEl.addEventListener("submit", (event) => {
@@ -20,8 +17,10 @@ formEl.addEventListener("submit", (event) => {
 });
 
 function darkMode() {
-	const darkMode = document.body;
-	darkMode.classList.toggle("dark-mode");
+	const darkModeBody = document.body;
+	const darkModeMain = document.body.main;
+	darkModeBody.classList.toggle("dark-body");
+	darkModeMain.classList.toggle("dark-main");
 }
 const darkModeBtn = document.querySelector("#dark-mode-btn");
 darkModeBtn.addEventListener("click", (event) => {
