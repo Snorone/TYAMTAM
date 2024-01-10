@@ -1,7 +1,7 @@
 import { displayMovie } from "./modules/display.js";
-import { displayRandomMovie } from "./modules/display.js";
+//import { displayRandomMovie } from "./modules/display.js";
 import { fetchInfo } from "./modules/fetch.js";
-import { randomFetch } from "./modules/fetch.js";
+//mport { randomFetch } from "./modules/fetch.js";
 
 const formEl = document.querySelector("form");
 formEl.addEventListener("submit", (event) => {
@@ -19,19 +19,19 @@ formEl.addEventListener("submit", (event) => {
 //   });
 });
 
-const randomBtn = document.querySelector("#randomBtn");
-randomBtn.addEventListener("click", (event) => {
-  event.preventDefault();
+// const randomBtn = document.querySelector("#randomBtn");
+// randomBtn.addEventListener("click", (event) => {
+//   event.preventDefault();
 
-  const randomPage = Math.floor(Math.random() * 10)+1;
-  console.log(randomPage);
-  randomFetch(randomPage)
-    .then(displayRandomMovie)
-//   fetchInfo(event.target.id, randomPage).then((response) => {
-//     // console.log(response, "response eller object");
-//     displayRandomMovie(response);
-//   });
+//   const randomPage = Math.floor(Math.random() * 10)+1;
+//   console.log(randomPage);
+//   randomFetch(randomPage)
+//     .then(displayRandomMovie)
+// //   fetchInfo(event.target.id, randomPage).then((response) => {
+// //     // console.log(response, "response eller object");
+// //     displayRandomMovie(response);
+// //   });
 
-//   console.log(randomNumber);
-  console.log(randomPage);
-});
+// //   console.log(randomNumber);
+//   console.log(randomPage);
+// });
