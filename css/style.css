@@ -15,16 +15,28 @@ img {
   width: 100vw;
 }
 
+.headTitle{
+  text-align: center;
+}
+
+.inputDiv{
+  text-align: center;
+}
+
+input{
+  width: 80%;
+  border-radius: 5px;
+}
+
 #searchBtn {
   width: 80px;
   height: 36.111px;
   flex-shrink: 0;
   border-radius: 10px;
   border: 1px solid #e8e8e8;
-
   background: linear-gradient(0deg, #eb5732 0%, #eb5732 100%);
-
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  margin: 10px 0;
 }
 
 footer {
@@ -60,11 +72,12 @@ footer {
   width: 100vw;
   height: 50px;
   background-color: #53373c;
-  position: absolute;
+  position: relative;
   bottom: 0px;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin-top: 20px;
 }
 
 .socialMedia {
