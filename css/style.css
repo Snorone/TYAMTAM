@@ -228,7 +228,6 @@ a:hover {
 a:hover {
 	cursor: pointer;
 }
-<<<<<<< Updated upstream
 
 .contact-container {
 	display: flex;
@@ -257,7 +256,3 @@ a:hover {
 	text-align: center;
 	font-size: 1em;
 }
-=======
-@media screen and (min-width: 401px) {
-}
->>>>>>> Stashed changes
