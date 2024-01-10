@@ -66,6 +66,19 @@ function displayMovie(movie) {
   }
 }
 
+export function displayRandomTopRated(movie){
+    flexContainerEl.innerHTML = "";
+    console.log(movie);
+    for(const movieList of movie.results){
+        const movieInfoDiv = document.createElement("div");
+        const moviePoster = movieList.poster_path;
+        console.log(movieList);
+        createAndAppendElement('img',imageBaseUrl +moviePoster, movieInfoDiv);
+        flexContainerEl.append(movieInfoDiv);
+        mainDivEl.append(flexContainerEl);
+    }
+
+}
 
 export function displayRandomMovie(movie) {
     flexContainerEl.innerHTML = "";
