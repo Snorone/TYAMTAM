@@ -15,36 +15,6 @@ img {
   width: 100vw;
 }
 
-<<<<<<< Updated upstream
-header{
-    width: 100vw;
-    height: 50px;
-    background-color: #EB5732;
-    margin-bottom: 20px;
-}
-
-#searchBtn{
-    width: 80px;
-height: 36.111px;
-flex-shrink: 0;
-    border-radius: 10px;
-border: 1px solid #E8E8E8;
-
-background: linear-gradient(0deg, #EB5732 0%, #EB5732 100%);
-
-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-}
-
-footer{
-    width: 100vw;
-    height: 50px;
-    background-color: #53373C;
-    position: absolute;
-    bottom: 0px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-=======
 header {
   width: 100vw;
   height: 50px;
@@ -151,9 +121,6 @@ a:hover {
 
     z-index: 1;
 
-<<<<<<< Updated upstream
-
-=======
     transform-origin: 4px 0px;
 
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
@@ -212,4 +179,3 @@ a:hover {
     opacity: 1;
   }
 }
->>>>>>> Stashed changes
