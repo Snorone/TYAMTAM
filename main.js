@@ -5,18 +5,17 @@ import { fetchInfo } from "./modules/fetch.js";
 
 const formEl = document.querySelector("form");
 formEl.addEventListener("submit", (event) => {
-    const userInput = document.querySelector("#userInput").value;
-    event.preventDefault();
-    fetchInfo(userInput)
-        .then(displayMovie)
-        formEl.reset();
+	const userInput = document.querySelector("#userInput").value;
+	event.preventDefault();
+	fetchInfo(userInput).then(displayMovie);
+	formEl.reset();
 
-//   fetchInfo(userInput)
-//     .then((responseObject) => {
-//     console.log(responseObject);
-//     displayMovie(responseObject);
-//     formEl.reset();
-//   });
+	//   fetchInfo(userInput)
+	//     .then((responseObject) => {
+	//     console.log(responseObject);
+	//     displayMovie(responseObject);
+	//     formEl.reset();
+	//   });
 });
 
 // const randomBtn = document.querySelector("#randomBtn");
@@ -35,3 +34,13 @@ formEl.addEventListener("submit", (event) => {
 // //   console.log(randomNumber);
 //   console.log(randomPage);
 // });
+
+function darkMode() {
+	const darkMode = document.body;
+	darkMode.classList.toggle("dark-mode");
+}
+const darkModeBtn = document.querySelector("#dark-mode-btn");
+darkModeBtn.addEventListener("click", (event) => {
+	darkMode();
+	event.preventDefault();
+});
