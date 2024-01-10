@@ -1,4 +1,5 @@
 * {
+<<<<<<< Updated upstream
   margin: 0;
   padding: 0;
 }
@@ -205,4 +206,65 @@ a:hover {
     transform: none;
     opacity: 1;
   }
+=======
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	width: 400px;
+}
+a:hover {
+	cursor: pointer;
+}
+header {
+	width: 100vw;
+	height: 50px;
+	background-color: #d63d41;
+	margin-bottom: 20px;
+}
+
+footer {
+	width: 100vw;
+	height: 50px;
+	background-color: #53373c;
+	position: absolute;
+	bottom: 0px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.socialMedia {
+	scale: 1/1;
+	width: 30px;
+}
+
+.contact-container {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-around;
+	align-items: center;
+	gap: 30px;
+}
+.contact-box {
+	width: 80vw;
+	position: relative;
+}
+.svgs {
+	width: 100%;
+}
+.contact-btn {
+	position: absolute;
+	bottom: 2%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 10px;
+	border: 1px solid #e8e8e8;
+	background: #7abaed;
+	padding: 1.5vh;
+	color: #ffffff;
+	text-align: center;
+	font-size: 1em;
+>>>>>>> Stashed changes
 }
