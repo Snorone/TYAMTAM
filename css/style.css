@@ -224,35 +224,3 @@ a:hover {
     transform: none;
     opacity: 1;
   }
-
-a:hover {
-	cursor: pointer;
-}
-
-.contact-container {
-	display: flex;
-	flex-flow: column nowrap;
-	justify-content: space-around;
-	align-items: center;
-	gap: 30px;
-}
-.contact-box {
-	width: 80vw;
-	position: relative;
-}
-.svgs {
-	width: 100%;
-}
-.contact-btn {
-	position: absolute;
-	bottom: 2%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	border-radius: 10px;
-	border: 1px solid #e8e8e8;
-	background: #7abaed;
-	padding: 1.5vh;
-	color: #ffffff;
-	text-align: center;
-	font-size: 1em;
-}
