@@ -8,6 +8,10 @@ img{
     width: 400px;
 }
 
+.coverImg{
+    width: 100vw;
+}
+
 header{
     width: 100vw;
     height: 50px;
@@ -19,7 +23,7 @@ footer{
     width: 100vw;
     height: 50px;
     background-color: #53373C;
-    position: absolute;
+    position: relative;
     bottom: 0px;
     display: flex;
     justify-content: space-around;
@@ -30,4 +34,8 @@ footer{
 .socialMedia{
     scale: 1/1;
     width: 30px;
+}
+
+#mainContainer{
+    height: 65vh;
 }
