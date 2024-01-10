@@ -8,8 +8,6 @@ const options = {
   },
 };
 
-
-
 export async function fetchInfo(userSearch, randomPage) {
   console.log(userSearch);
   let url = `https://api.themoviedb.org/3/search/multi?query=${userSearch}&include_adult=false&language=en-US&page=1`;
@@ -38,6 +36,9 @@ export async function fetchInfo(userSearch, randomPage) {
   }
 }
 
+// export async function randomTopRatedFetch(){
+
+// }
 export async function randomFetch(userSearch) {
   console.log(userSearch);
   const url = `https://api.themoviedb.org/3/movie/popular?language=en-US&page=${userSearch}`;

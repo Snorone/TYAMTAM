@@ -65,6 +65,8 @@ function displayMovie(movie) {
     mainDivEl.append(flexContainerEl);
   }
 }
+
+
 export function displayRandomMovie(movie) {
     flexContainerEl.innerHTML = "";
     // console.log(movie.results[0]);
