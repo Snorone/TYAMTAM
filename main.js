@@ -10,25 +10,24 @@ randomTopRatedFetch(randomPage).then(displayRandomTopRated);
 
 const formEl = document.querySelector("form");
 formEl.addEventListener("submit", (event) => {
-	const userInput = document.querySelector("#userInput").value;
-	event.preventDefault();
-	fetchInfo(userInput).then(displayMovie);
-	formEl.reset();
+  const userInput = document.querySelector("#userInput").value;
+  event.preventDefault();
+  fetchInfo(userInput).then(displayMovie);
+  formEl.reset();
 });
-
+// ! start melker
 function darkMode() {
-	const darkModeBody = document.body;
-	const darkModeMain = document.body.main;
-	darkModeBody.classList.toggle("dark-body");
-	darkModeMain.classList.toggle("dark-main");
+  let darkModeBody = document.body;
+  darkModeBody.classList.toggle("darkmode");
 }
-const darkModeBtn = document.querySelector("#dark-mode-btn");
+const darkModeBtn = document.querySelector(".switch");
 darkModeBtn.addEventListener("click", (event) => {
-	darkMode();
-	event.preventDefault();
+  darkMode();
+  event.preventDefault();
 });
 
+// ! slut melker
 //menyburgare. Problem att fungera dock//
-document.getElementById('menuIcon').addEventListener('click', () => {
-	document.getElementById('menuList').classList.add('show');
-  });
+document.getElementById("menuIcon").addEventListener("click", () => {
+  document.getElementById("menuList").classList.add("show");
+});
