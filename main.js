@@ -10,6 +10,8 @@ formEl.addEventListener("submit", (event) => {
 	fetchInfo(userInput).then(displayMovie);
 	formEl.reset();
 
+	let footer = document.querySelector("footer").style.position = "relative";
+
 	//   fetchInfo(userInput)
 	//     .then((responseObject) => {
 	//     console.log(responseObject);
