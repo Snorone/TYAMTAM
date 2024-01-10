@@ -19,6 +19,10 @@ export async function fetchInfo(userSearch, randomPage) {
   // }
   // console.log(url);
 
+
+  const mainDivEl = document.querySelector('#mainContainer');
+  const flexContainerEl = document.querySelector('#flexContainer');
+
   const response = await fetch(url, options);
   if (response.ok) {
     const data = await response.json();
@@ -26,7 +30,8 @@ export async function fetchInfo(userSearch, randomPage) {
     if (data.results.length == 0) {
       const h2El = document.createElement("h2");
       h2El.innerText = "No matches to your search result";
-      document.body.append(h2El);
+      flexContainerEl.append(h2El);
+      mainDivEl.append(flexContainerEl);
     }
     return data;
   }
