@@ -1,6 +1,6 @@
 import { genreFetch } from "./fetch.js";
 
-const emptyDiv = document.createElement("div");
+// const emptyDiv = document.createElement("div");
 const imageBaseUrl = `https://image.tmdb.org/t/p/original/`;
 
 const mainDivEl = document.querySelector('#mainContainer');
@@ -8,7 +8,7 @@ const flexContainerEl = document.querySelector('#flexContainer');
 
 function displayMovie(movie) {
   console.log(movie);
-  emptyDiv.innerHTML = "";
+  flexContainerEl.innerHTML = "";
   for (const movieList of movie.results) {
     const moviePoster = movieList.poster_path;
     const actorPoster = movieList.profile_path;
@@ -61,8 +61,8 @@ function displayMovie(movie) {
       }
     }
 
-    emptyDiv.append(movieInfoDiv);
-    document.body.append(emptyDiv);
+    flexContainerEl.append(movieInfoDiv);
+    mainDivEl.append(emptyDiv);
   }
 }
 export function displayRandomMovie(movie) {
