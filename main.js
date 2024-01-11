@@ -19,6 +19,7 @@ formEl.addEventListener("submit", (event) => {
 function darkMode() {
 	let darkModeBody = document.body;
 	darkModeBody.classList.toggle("darkmode");
+	preventDefault();
 }
 function changeSvgs() {
 	const contactUs = document.querySelector(".callUs");
@@ -34,10 +35,4 @@ darkModeBtn.addEventListener("click", (event) => {
 	darkMode();
 	changeSvgs();
 	event.preventDefault();
-});
-
-// ! slut melker
-//menyburgare. Problem att fungera dock//
-document.getElementById("menuIcon").addEventListener("click", () => {
-	document.getElementById("menuList").classList.add("show");
 });
