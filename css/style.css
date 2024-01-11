@@ -32,8 +32,15 @@ img {
 }
 
 .inputDiv {
-	text-align: center;
+  text-align: center;
 }
+  #userInput{
+    margin-top: 20px;
+    width: 200px;
+    height: 40px;
+    border-radius: 68px;
+    padding-left: 10px;
+  }
 
 input {
 	width: 60%;
@@ -178,11 +185,11 @@ a:hover {
 	margin-top: 10px;
 }
 #aboutUs_container {
-	display: flex;
-	flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
-#aboutUs_container p {
-	text-align: left;
+#aboutUs_container p{
+  text-align: left;
 }
 
 #footerRandom {
@@ -317,18 +324,20 @@ a:hover {
 }
 
 @media screen and (max-width: 400px) {
-	.menu-desktop {
-		display: none;
-	}
+  .menu-desktop {
+    display: none;
+  }
 }
 @media screen and (min-width: 401px) {
-	#menuToggle {
-		display: none;
-	}
-	#menuToggle span {
-		opacity: 0;
-	}
-	#menu {
-		display: none;
-	}
+  #menuToggle {
+    display: none;
+  }
+  #menuToggle span {
+    opacity: 0;
+  }
+  #menu {
+    display: none;
+  }
 }
+
+/* dkjsnf */
