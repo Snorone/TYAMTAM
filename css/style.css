@@ -65,7 +65,7 @@ input {
 	box-sizing: border-box;
   margin: auto;
   margin-top: 20px;
-  min-width: 400px;
+  max-width: 400px;
 }
 #movieInfoDiv img{
 	margin: auto;
@@ -160,19 +160,22 @@ a:hover {
 	font-weight: 400;
 	line-height: normal;
 }
-.contact-container {
+/* .contact-container {
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: space-around;
 	align-items: center;
 	gap: 30px;
-}
+} */
+
 .contact-box {
+  margin: auto;
 	width: 80vw;
 	position: relative;
 }
 .svgs {
 	width: 100%;
+  margin-top: 15px;
 }
 .contact-btn {
 	position: absolute;
@@ -359,7 +362,7 @@ a:hover {
   display: flex;
   justify-content: space-evenly;
   gap: 20px;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 }
 
 #aboutUs_container{
@@ -395,28 +398,93 @@ a{
 img{
   width: 200px;
 } */
-.contact-box img{
-  width: 400px;
-}
 
 #movieInfoDiv {
 	box-sizing: border-box;
+  margin: auto;
+  margin-top: 20px;
+  overflow-wrap: break-word;
+  padding: 0;
+}
+
+#movieInfoDiv img{
+	box-sizing: border-box;
+  max-width: 230px;
+
+}
+
+#contactFlex{
+  display: flex;
+  justify-content: space-evenly;
+}
+#contact-box1 {
+	width: 200px;
+  margin: 0;
+}
+#contact-box2 {
+	width: 200px;
+  margin: 0;
+}
+#contact-box3 {
+	width: 200px;
+  margin: 0;
+}
+
+.contact-box img{
+  width: 300px;
+}
+
+#contact-btn1 {
+	position: absolute;
+	bottom: 2%;
+	left: 50%;
+	transform: translate(20%, -100%);
+	border-radius: 10px;
+	border: 1px solid #e8e8e8;
+	background: #7abaed;
+	padding: 1.5vh;
+	color: #ffffff;
+	text-align: center;
+	font-size: 1em;
+}
+#contact-btn2 {
+	position: absolute;
+	bottom: 2%;
+	left: 50%;
+	transform: translate(5%, -100%);
+	border-radius: 10px;
+	border: 1px solid #e8e8e8;
+	background: #7abaed;
+	padding: 1.5vh;
+	color: #ffffff;
+	text-align: center;
+	font-size: 1em;
+}
+
+#contact-btn3 {
+	position: absolute;
+	bottom: 2%;
+	left: 50%;
+	transform: translate(5%, -55%);
+	border-radius: 10px;
+	border: 1px solid #e8e8e8;
+	background: #7abaed;
+	padding: 1.5vh;
+	color: #ffffff;
+	text-align: center;
+	font-size: 1em;
+}
+
+#movieInfoDiv h3{
+  padding: 0;
   max-width: 200px;
 
 }
-#movieInfoDiv h3{
-  text-align: left;
-  padding: 0;
-
-}
 #movieInfoDiv h4{
-  text-align: left;
   padding: 0;
-
 }
 
 #movieInfoDiv p {
-  text-align: left;
   padding: 0;
 }
 }
