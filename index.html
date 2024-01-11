@@ -4,12 +4,11 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<script src="./main.js" type="module"></script>
-    <link rel="shortcut icon" href="./assets/icon.ico" type="image/x-icon">
+		<script src="./darkmode.js" type="module"></script>
+
+		<link rel="shortcut icon" href="./assets/icon.ico" type="image/x-icon" />
 		<link rel="stylesheet" href="./css/darkmode.css" />
-		<!-- <link rel="stylesheet" href="./css/random.css" /> -->
-
-		<!--Vad är detta?-->
-
+		<link rel="shortcut icon" href="#" type="image/x-icon" />
 		<link rel="stylesheet" href="./css/style.css" />
 		<title>Movie Database</title>
 	</head>
@@ -38,26 +37,11 @@
 				</div>
 			</nav>
 			<nav class="menu-desktop">
-				<!--höger-->
 				<a href="./index.html">Home</a>
 				<a href="./random.html">Random</a>
 				<a href="./about.html">About us</a>
 				<a href="./contact.html">Contact</a>
 			</nav>
-
-			<!-- <nav>
-        <div class="menuIcon" id="menuIcon">
-          <div class="burgerLine"></div>
-          <div class="burgerLine"></div>
-          <div class="burgerLine"></div>
-        </div>
-        <ul class="menuList" id="menuList">
-          <li><a href="./index.html">Home</a></li>
-          <li><a href="./random.html">Random</a></li>
-          <li><a href="./about.html">About us</a></li>
-          <li><a href="./contact.html">Contact</a></li>
-        </ul>
-      </nav> -->
 		</header>
 		<main>
 			<div class="cover-box">
@@ -89,7 +73,7 @@
 		</div>
 
 		<footer>
-			<div>
+			<div id="flexFooter">
 				<a href=""
 					><img class="socialMedia" src="./assets/Mask group-1.svg" alt="X"
 				/></a>
@@ -109,7 +93,6 @@
 					><img class="socialMedia" src="./assets/Mask group.svg" alt="Github"
 				/></a>
 				<div class="dmBtn">
-					<p>dark mode</p>
 					<input type="checkbox" id="switch" /><label for="switch"
 						>Toggle</label
 					>

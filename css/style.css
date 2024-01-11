@@ -9,6 +9,7 @@ body {
 	font-family: "Avenir Next", "Avenir", sans-serif;
 	overflow-x: hidden;
 	text-align: center;
+	background-color: var(--background);
 }
 
 #logo {
@@ -100,23 +101,21 @@ header {
 footer {
 	width: 100vw;
 	height: 30px;
-  padding-bottom: 40px;
+	padding-bottom: 40px;
 	background-color: #53373c;
 	position: relative;
 	bottom: 0px;
-	
+
 	justify-content: space-around;
 	align-items: center;
 	margin-top: 20px;
 }
 
-#test{
-  display: flex;
-  gap: 10px;
+#flexFooter {
+	display: flex;
+	gap: 10px;
 	align-items: center;
-  justify-content: center;
-  
-
+	justify-content: center;
 }
 
 .socialMedia {
