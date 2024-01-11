@@ -8,6 +8,8 @@ randomBtn.addEventListener("click", (event) => {
 	const randomPage = Math.floor(Math.random() * 10) + 1;
 	console.log(randomPage);
 	randomFetch(randomPage).then(displayRandomMovie);
+	let footerRand = document.querySelector("#footerRandom");
+	footerRand.style.position = "relative";
 	//   fetchInfo(event.target.id, randomPage).then((response) => {
 	//     // console.log(response, "response eller object");
 	//     displayRandomMovie(response);

@@ -79,6 +79,7 @@ export function displayRandomTopRated(movie){
         createAndAppendElement('h3', movie.results[i].title, movieInfoDiv);
         flexContainerEl.append(movieInfoDiv);
         mainDivEl.append(flexContainerEl);
+       
     }
     // for(const movieList of movie.results){
     //     const movieInfoDiv = document.createElement("div");
