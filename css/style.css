@@ -63,12 +63,29 @@ input {
 
 #movieInfoDiv {
 	box-sizing: border-box;
-	margin-top: 10px;
+  margin: auto;
+  margin-top: 20px;
+  min-width: 400px;
+}
+#movieInfoDiv img{
+	margin: auto;
+  width: 360px;
+
+}
+#movieInfoDiv h3{
+  text-align: left;
+  padding-left: 20px;
+}
+#movieInfoDiv h4{
+  padding-left: 20px;
+  text-align: left;
 }
 #movieInfoDiv p {
-	/* text-align: left; */
-	padding: 10px;
+  text-align: left;
+  padding-left: 20px;
 }
+
+
 /* #genreDivStyle {
 	display: flex;
 	flex-wrap: wrap;
@@ -76,9 +93,9 @@ input {
 	gap: 10px;
 } */
 
-#genreDivStyle p {
+/* #genreDivStyle p {
 	padding: 0;
-}
+} */
 header {
 	width: 100vw;
 	height: 50px;
@@ -327,7 +344,7 @@ a:hover {
     display: none;
   }
 }
-@media screen and (min-width: 401px) {
+@media screen and (min-width: 400px) {
   #menuToggle {
     display: none;
   }
@@ -344,7 +361,6 @@ a:hover {
   gap: 20px;
   flex-wrap: nowrap;
 }
-
 
 #aboutUs_container{
   display: flex;
@@ -375,12 +391,33 @@ nav{
 a{
   margin: 5px;
 }
-
+/* 
 img{
-  width: 400px;
-}
+  width: 200px;
+} */
 .contact-box img{
   width: 400px;
+}
+
+#movieInfoDiv {
+	box-sizing: border-box;
+  max-width: 200px;
+
+}
+#movieInfoDiv h3{
+  text-align: left;
+  padding: 0;
+
+}
+#movieInfoDiv h4{
+  text-align: left;
+  padding: 0;
+
+}
+
+#movieInfoDiv p {
+  text-align: left;
+  padding: 0;
 }
 }
 /* dkjsnf */
