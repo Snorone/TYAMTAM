@@ -6,86 +6,115 @@
 		<script src="./main.js" type="module"></script>
     <link rel="shortcut icon" href="./assets/icon.ico" type="image/x-icon">
 		<link rel="stylesheet" href="./css/darkmode.css" />
-    <link rel="stylesheet" href="./css/style.css">
 		<!-- <link rel="stylesheet" href="./css/random.css" /> -->
 
-                    <span></span>
-                    <span></span>
-                    <span></span>
+		<!--Vad är detta?-->
 
-                    <ul id="menu">
-                        <a href="./index.html"><li>Home</li></a>
-                        <a href="./random.html"><li>Random</li></a>
-                        <a href="./about.html"><li>About</li></a>
-                        <a href="./contact.html"><li>Contact</li></a>
-                    </ul>
-                </div>
-            </nav>
-            <nav class="menu-desktop">
-                <a href="./index.html">Home</a>
-                <a href="./random.html">Random</a>
-                <a href="./about.html">About us</a>
-                <a href="./contact.html">Contact</a>
-            </nav>
-        </header>
-        <main>
-            <div class="cover-box">
-                <img
-                    src="./assets/Img _Cover efter sida_.png"
-                    class="coverImg"
-                    alt=""
-                />
-                <h1 class="cover-text">Search movies</h1>
-            </div>
-            <form>
-                <div class="inputDiv">
-                    <input
-                        type="text"
-                        id="userInput"
-                        placeholder=" search for a person or movie!"
-                    />
-                    <br />
-                    <button class="searchBtn">Search</button>
-                </div>
-            </form>
-        </main>
+		<link rel="stylesheet" href="./css/style.css" />
+		<title>Movie Database</title>
+	</head>
+	<body>
+		<header>
+			<div>
+				<a href="index.html"
+					><img id="logo" src="./assets/logo.png" alt="logo"
+				/></a>
+			</div>
+			<nav>
+				<div></div>
+				<div id="menuToggle">
+					<input type="checkbox" />
 
-        <div id="mainContainer">
-            <div id="flexContainer"></div>
+					<span></span>
+					<span></span>
+					<span></span>
+
+					<ul id="menu">
+						<a href="./index.html"><li>Home</li></a>
+						<a href="./random.html"><li>Random</li></a>
+						<a href="./about.html"><li>About</li></a>
+						<a href="./contact.html"><li>Contact</li></a>
+					</ul>
+				</div>
+			</nav>
+			<nav class="menu-desktop">
+				<!--höger-->
+				<a href="./index.html">Home</a>
+				<a href="./random.html">Random</a>
+				<a href="./about.html">About us</a>
+				<a href="./contact.html">Contact</a>
+			</nav>
+
+			<!-- <nav>
+        <div class="menuIcon" id="menuIcon">
+          <div class="burgerLine"></div>
+          <div class="burgerLine"></div>
+          <div class="burgerLine"></div>
         </div>
+        <ul class="menuList" id="menuList">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./random.html">Random</a></li>
+          <li><a href="./about.html">About us</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </nav> -->
+		</header>
+		<main>
+			<div class="cover-box">
+				<img
+					src="./assets/Img _Cover efter sida_.png"
+					class="coverImg"
+					alt=""
+				/>
+				<h1 class="cover-text">Search movies</h1>
+			</div>
+			<form>
+				<div class="inputDiv">
+					<input
+						type="text"
+						id="userInput"
+						placeholder=" search for a person or movie!"
+					/>
+					<br />
+					<button class="searchBtn">Search</button>
+				</div>
+			</form>
+			<!--divar som ska containa bilder och titlar av sökresultat här?-->
+		</main>
 
-        <footer>
-            <div id="test">
-                <a href=""
-                    ><img
-                        class="socialMedia"
-                        src="./assets/Mask group-1.svg"
-                        alt="X"
-                /></a>
-                <a href=""
-                    ><img
-                        class="socialMedia"
-                        src="./assets/Mask group-2.svg"
-                        alt="Facebook"
-                /></a>
-                <a href=""
-                    ><img
-                        class="socialMedia"
-                        src="./assets/Mask group-3.svg"
-                        alt="Instagram"
-                /></a>
-                <a href=""
-                    ><img
-                        class="socialMedia"
-                        src="./assets/Mask group.svg"
-                        alt="Github"
-                /></a>
-                <div class="dmBtn">
-                    <input type="checkbox" id="switch" /><label for="switch"
-                        >Toggle</label
-                    >
-                </div>
-            </div>
-        </footer>
-    </body>
+		<div id="mainContainer">
+			<!--Inneahåller flex container-->
+			<div id="flexContainer"></div>
+			<!--Filmer kommer att visas här-->
+		</div>
+
+		<footer>
+			<div>
+				<a href=""
+					><img class="socialMedia" src="./assets/Mask group-1.svg" alt="X"
+				/></a>
+				<a href=""
+					><img
+						class="socialMedia"
+						src="./assets/Mask group-2.svg"
+						alt="Facebook"
+				/></a>
+				<a href=""
+					><img
+						class="socialMedia"
+						src="./assets/Mask group-3.svg"
+						alt="Instagram"
+				/></a>
+				<a href=""
+					><img class="socialMedia" src="./assets/Mask group.svg" alt="Github"
+				/></a>
+				<div class="dmBtn">
+					<p>dark mode</p>
+					<input type="checkbox" id="switch" /><label for="switch"
+						>Toggle</label
+					>
+				</div>
+			</div>
+		</footer>
+	</body>
 </html>
