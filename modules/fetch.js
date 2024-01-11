@@ -30,7 +30,7 @@ export async function fetchInfo(userSearch, randomPage) {
       const h2El = document.createElement("h2");
       h2El.innerText = "No matches to your search result";
       mainDivEl.append(h2El);
-
+      let footer = document.querySelector('footer').style.position = 'absolute';
     }
     return data;
   }
