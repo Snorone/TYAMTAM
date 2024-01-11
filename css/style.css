@@ -32,8 +32,15 @@ img {
 }
 
 .inputDiv {
-  text-align: center;
+  text-align: center;  
 }
+  #userInput{
+    margin-top: 20px;
+    width: 200px;
+    height: 40px;
+    border-radius: 68px;
+    padding-left: 10px;
+  }
 
 input {
   width: 60%;
@@ -167,10 +174,7 @@ a:hover {
 .profileDiv h2 {
   margin-top: 10px;
 }
-#aboutUs_container {
-  display: flex;
-  flex-wrap: wrap;
-}
+
 #aboutUs_container p{
   text-align: left;
 }
@@ -310,6 +314,7 @@ a:hover {
   .menu-desktop {
     display: none;
   }
+
 }
 @media screen and (min-width: 401px) {
   #menuToggle {
@@ -320,5 +325,41 @@ a:hover {
   }
   #menu {
     display: none;
+  }
+  #flexContainer{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+  }
+
+
+  #aboutUs_container{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .profileDiv{
+    box-sizing: border-box;
+    width: 30%;
+  }
+  .coverImg{
+    height: 200px;
+  }
+  .cover-text{
+    font-size: 50px;
+  }
+  #userInput{
+    margin-top: 20px;
+    width: 500px;
+    height: 40px;
+    border-radius: 68px;
+    padding-left: 10px;
+  }
+  nav{
+    text-align: right;
+    margin-right: 15px;
+    
+  }
+  a{
+    margin: 5px;
   }
 }
