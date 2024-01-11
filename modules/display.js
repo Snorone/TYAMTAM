@@ -1,7 +1,8 @@
 import { genreFetch } from "./fetch.js";
 
 // const emptyDiv = document.createElement("div");
-const imageBaseUrl = `https://image.tmdb.org/t/p/original/`;
+// const imageBaseUrl = `https://image.tmdb.org/t/p/original/`;
+const imageBaseUrl = `https://image.tmdb.org/t/p/w400/`;
 
 const mainDivEl = document.querySelector('#mainContainer');
 const flexContainerEl = document.querySelector('#flexContainer');

@@ -1,7 +1,5 @@
 import { displayMovie, displayRandomTopRated } from "./modules/display.js";
-// import { displayRandomMovie } from "./modules/display.js";
 import { fetchInfo } from "./modules/fetch.js";
-// import { randomFetch } from "./modules/fetch.js";
 import { randomTopRatedFetch } from "./modules/fetch.js";
 
 const randomPage = Math.floor(Math.random() * 20) + 1;

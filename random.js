@@ -10,11 +10,5 @@ randomBtn.addEventListener("click", (event) => {
   randomFetch(randomPage).then(displayRandomMovie);
   let footerRand = document.querySelector("#footerRandom");
   footerRand.style.position = "relative";
-  //   fetchInfo(event.target.id, randomPage).then((response) => {
-  //     // console.log(response, "response eller object");
-  //     displayRandomMovie(response);
-  //   });
-
-  //   console.log(randomNumber);
   console.log(randomPage);
 });
