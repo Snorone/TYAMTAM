@@ -30,6 +30,7 @@ function displayMovie(movie) {
         createNoImageElement(whenIsNoImage, movieInfoDiv);
         createAndAppendElement("h3", movieList.title, movieInfoDiv);
         createGenreElement(movieInfoDiv);
+      
       }
 
       for (const genreList of movieList.genre_ids) {
@@ -60,7 +61,6 @@ function displayMovie(movie) {
         createAndAppendElement("h3", movieList.name, movieInfoDiv);
       }
     }
-
     flexContainerEl.append(movieInfoDiv);
     mainDivEl.append(flexContainerEl);
   }
@@ -73,11 +73,18 @@ export function displayRandomTopRated(movie){
     for(let i = 0; i < 5 ; i++){
         console.log(i);
         const movieInfoDiv = document.createElement("div");
+        movieInfoDiv.id = 'movieInfoDiv';
+        const genreDivEl = document.createElement('div')
+        genreDivEl.id = 'genreDivStyle';
+        console.log(genreDivEl.id);
+
         const moviePoster = movie.results[i].poster_path;
         console.log(moviePoster);
         createAndAppendElement('img',imageBaseUrl +moviePoster, movieInfoDiv);
         createAndAppendElement('h3', movie.results[i].title, movieInfoDiv);
-        createGenreElement(movieInfoDiv);
+        movieInfoDiv.append(genreDivEl);
+        // createGenreElement(movieInfoDiv);
+        createGenreElement(genreDivEl);
         for (const genreList of movie.results[i].genre_ids) {
           // console.log(genreList);
           genreFetch(genreList).then((getGenre) => {
@@ -88,7 +95,7 @@ export function displayRandomTopRated(movie){
                 //   console.log(genreArr.name);
                 const genreId = document.createElement("p");
                 genreId.innerText = genreArr.name;
-                movieInfoDiv.append(genreId);
+                genreDivEl.append(genreId);
               }
             }
           });
@@ -98,15 +105,6 @@ export function displayRandomTopRated(movie){
         mainDivEl.append(flexContainerEl);
        
     }
-    // for(const movieList of movie.results){
-    //     const movieInfoDiv = document.createElement("div");
-    //     const moviePoster = movieList.poster_path;
-    //     console.log(movieList);
-    //     createAndAppendElement('img',imageBaseUrl +moviePoster, movieInfoDiv);
-    //     flexContainerEl.append(movieInfoDiv);
-    //     mainDivEl.append(flexContainerEl);
-    // }
-
 }
 
 export function displayRandomMovie(movie) {
@@ -115,12 +113,16 @@ export function displayRandomMovie(movie) {
     const randomNumber = Math.floor(Math.random() * 20);
     console.log(randomNumber);
     const movieInfoDiv = document.createElement("div");
+    movieInfoDiv.id = 'movieInfoDiv';
+    const genreDivEl = document.createElement('div')
+    genreDivEl.id = 'genreDivStyle';
 
     console.log(movie.results[`${randomNumber}`]);
     createAndAppendElement('img',imageBaseUrl + movie.results[`${randomNumber}`].poster_path, movieInfoDiv);
     createAndAppendElement('h3', movie.results[`${randomNumber}`].title,movieInfoDiv);
-    createAndAppendElement('p', movie.results[`${randomNumber}`].overview,movieInfoDiv)
-    createGenreElement(movieInfoDiv);
+    createAndAppendElement('p', movie.results[`${randomNumber}`].overview,movieInfoDiv);
+    movieInfoDiv.append(genreDivEl);
+    createGenreElement(genreDivEl);
     for (const genreList of movie.results[`${randomNumber}`].genre_ids) {
         // console.log(genreList);
         genreFetch(genreList).then((getGenre) => {
@@ -131,7 +133,7 @@ export function displayRandomMovie(movie) {
               //   console.log(genreArr.name);
               const genreId = document.createElement("p");
               genreId.innerText = genreArr.name;
-              movieInfoDiv.append(genreId);
+              genreDivEl.append(genreId);
             }
           }
         });
@@ -148,7 +150,7 @@ function createNoImageElement(image, append) {
 
 function createGenreElement(movieInfoDiv) {
   const genreEl = document.createElement("h4");
-  genreEl.innerText = "Genre";
+  genreEl.innerText = "Genre :";
   movieInfoDiv.append(genreEl);
 }
 

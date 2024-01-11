@@ -20,7 +20,11 @@ body {
 }
 
 img {
+<<<<<<< HEAD
 	width: 80%;
+=======
+  width: 95%;
+>>>>>>> c80bb463daf7c402078cdbfe031042074f8265e8
 }
 
 .coverImg {
@@ -53,6 +57,24 @@ input {
 	margin: 10px 0;
 }
 
+#movieInfoDiv{
+  box-sizing: border-box;
+  margin-top: 10px;
+}
+#movieInfoDiv p {
+  text-align: left;
+  padding: 10px;
+}
+#genreDivStyle{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+#genreDivStyle p{
+  padding: 0;
+}
 header {
 	width: 100vw;
 	height: 50px;
@@ -152,6 +174,9 @@ a:hover {
 #aboutUs_container {
 	display: flex;
 	flex-wrap: wrap;
+}
+#aboutUs_container p{
+  text-align: left;
 }
 
 #footerRandom {
