@@ -9,7 +9,7 @@
 }
 
 /* Darkmode slider */
-input[type="checkbox"] {
+#switch[type="checkbox"] {
 	height: 0;
 	width: 0;
 	visibility: hidden;
@@ -39,7 +39,7 @@ label:after {
 }
 
 input:checked + label {
-	background: #bada55;
+	background: #4f4443;
 }
 
 input:checked + label:after {
