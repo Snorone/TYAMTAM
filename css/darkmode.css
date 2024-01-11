@@ -12,6 +12,7 @@
 .dmBtn {
 	width: 30px;
 	height: auto;
+	margin-bottom: 20px;
 }
 #switch[type="checkbox"] {
 	height: 0;
