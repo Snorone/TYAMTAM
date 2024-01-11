@@ -419,23 +419,27 @@ img{
 
 #contactFlex{
   display: flex;
-  justify-content: space-evenly;
+ 
 }
+
 #contact-box1 {
-	width: 200px;
-  margin: 0;
+	width: 270px;
+  margin-left: 60px;
 }
 #contact-box2 {
-	width: 200px;
-  margin: 0;
+	width: 270px;
+  margin-left: 55px;
+
 }
 #contact-box3 {
-	width: 200px;
-  margin: 0;
+	width: 270px;
+  margin-left: 50px;
+
 }
 
 .contact-box img{
-  width: 300px;
+  width: 360px;
+  margin-top: 20px;
 }
 
 #contact-btn1 {
@@ -469,7 +473,7 @@ img{
 	position: absolute;
 	bottom: 2%;
 	left: 50%;
-	transform: translate(5%, -55%);
+	transform: translate(5%, -100%);
 	border-radius: 10px;
 	border: 1px solid #e8e8e8;
 	background: #7abaed;
@@ -500,7 +504,6 @@ img{
   margin: 20px;
   gap: 30px;
 }
-
 
 #movieInfoDiv #whenMovieHasNoImage{
   height: 300px;
