@@ -77,6 +77,23 @@ export function displayRandomTopRated(movie){
         console.log(moviePoster);
         createAndAppendElement('img',imageBaseUrl +moviePoster, movieInfoDiv);
         createAndAppendElement('h3', movie.results[i].title, movieInfoDiv);
+        createGenreElement(movieInfoDiv);
+        for (const genreList of movie.results[i].genre_ids) {
+          // console.log(genreList);
+          genreFetch(genreList).then((getGenre) => {
+            //console.log(id);
+            for (const genreArr of getGenre.genres) {
+              //console.log(genreArr.id);
+              if (genreArr.id === genreList) {
+                //   console.log(genreArr.name);
+                const genreId = document.createElement("p");
+                genreId.innerText = genreArr.name;
+                movieInfoDiv.append(genreId);
+              }
+            }
+          });
+        }
+
         flexContainerEl.append(movieInfoDiv);
         mainDivEl.append(flexContainerEl);
     }
