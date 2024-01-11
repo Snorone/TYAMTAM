@@ -1,7 +1,5 @@
 import { displayMovie, displayRandomTopRated } from "./modules/display.js";
-// import { displayRandomMovie } from "./modules/display.js";
 import { fetchInfo } from "./modules/fetch.js";
-// import { randomFetch } from "./modules/fetch.js";
 import { randomTopRatedFetch } from "./modules/fetch.js";
 
 const randomPage = Math.floor(Math.random() * 20) + 1;
@@ -15,7 +13,6 @@ formEl.addEventListener("submit", (event) => {
 	fetchInfo(userInput).then(displayMovie);
 	formEl.reset();
 });
-// ! start melker
 function darkMode() {
 	let darkModeBody = document.body;
 	darkModeBody.classList.toggle("darkmode");
