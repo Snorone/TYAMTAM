@@ -1,4 +1,4 @@
-@media screen and (min-width: 401px) {
+/* @media screen and (min-width: 401px) {
   #menuToggle {
     display: none;
   }
@@ -12,9 +12,9 @@
 
 body {
   font-family: "Avenir Next", "Avenir", sans-serif;
-  overflow-x: hidden; /* needed because hiding the menu on the right side is not perfect,  */
-}
-main {
+  overflow-x: hidden;
+} */
+/* main {
   text-align: center;
   margin: 0 auto;
 }
@@ -63,16 +63,16 @@ a:hover {
 
   cursor: pointer;
 
-  opacity: 0; /* hide this */
-  z-index: 6; /* and place it over the hamburger */
+  opacity: 0; 
+  z-index: 6; 
 
   -webkit-touch-callout: none;
-}
+} */
 
 /*
   * Just a quick hamburger
   */
-#menuToggle span {
+/* #menuToggle span {
   display: block;
   width: 33px;
   height: 4px;
@@ -80,9 +80,9 @@ a:hover {
   position: relative;
 
   background: #ffffff;
-  border-radius: 3px;
-  /* color: #ffffff; */
-
+  border-radius: 3px; */
+/* color: #ffffff; */
+/* 
   z-index: 5;
 
   transform-origin: 4px 0px;
@@ -97,39 +97,39 @@ a:hover {
 
 #menuToggle span:nth-last-child(2) {
   transform-origin: 0% 100%;
-}
+} */
 
 /* 
   * Transform all the slices of hamburger
   * into a crossmark.
   */
-#menuToggle input:checked ~ span {
+/* #menuToggle input:checked ~ span {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
   background: #ffffff;
-}
+} */
 
 /*
   * But let's hide the middle one.
   */
-#menuToggle input:checked ~ span:nth-last-child(3) {
+/* #menuToggle input:checked ~ span:nth-last-child(3) {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
-}
+} */
 
 /*
   * Ohyeah and the last one should go the other direction
   */
-#menuToggle input:checked ~ span:nth-last-child(2) {
+/* #menuToggle input:checked ~ span:nth-last-child(2) {
   opacity: 1;
   transform: rotate(-45deg) translate(0, -1px);
-}
+} */
 
 /*
   * Make this absolute positioned
   * at the top left of the screen
   */
-#menu {
+/* #menu {
   position: absolute;
   width: 122px;
   height: 195px;
@@ -143,9 +143,9 @@ a:hover {
   background: #eb5732;
   border: 1px solid #fff;
   list-style-type: none;
-  -webkit-font-smoothing: antialiased;
-  /* to stop flickering of text in safari */
-
+  -webkit-font-smoothing: antialiased; */
+/* to stop flickering of text in safari */
+/* 
   transform-origin: 0% 0%;
   transform: translate(100%, 0);
 
@@ -155,13 +155,12 @@ a:hover {
 #menu li {
   padding: 10px 0;
   font-size: 22px;
-}
+} */
 
 /*
   * And let's fade it in from the left
   */
-#menuToggle input:checked ~ ul {
+/* #menuToggle input:checked ~ ul {
   transform: none;
   opacity: 1;
-}
-
+} */
