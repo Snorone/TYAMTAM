@@ -70,7 +70,6 @@ input {
 #movieInfoDiv img{
 	margin: auto;
   width: 360px;
-
 }
 #movieInfoDiv h3{
   text-align: left;
@@ -83,6 +82,11 @@ input {
 #movieInfoDiv p {
   text-align: left;
   padding-left: 20px;
+}
+
+#ramdonMovieInfoDiv{
+  text-align: left;
+  padding: 10px;
 }
 
 
@@ -403,7 +407,7 @@ img{
 	box-sizing: border-box;
   margin: auto;
   margin-top: 20px;
-  overflow-wrap: break-word;
+
   padding: 0;
 }
 
@@ -486,6 +490,21 @@ img{
 
 #movieInfoDiv p {
   padding: 0;
+}
+#ramdonMovieInfoDiv img{
+  width: 300px;
+}
+
+#ramdonMovieInfoDiv{
+  display: flex;
+  margin: 20px;
+  gap: 30px;
+}
+
+
+#movieInfoDiv #whenMovieHasNoImage{
+  height: 300px;
+  margin-bottom: 50px;
 }
 }
 /* dkjsnf */

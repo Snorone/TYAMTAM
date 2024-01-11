@@ -116,17 +116,24 @@ export function displayRandomMovie(movie) {
     const randomNumber = Math.floor(Math.random() * 20);
     console.log(randomNumber);
     const movieInfoDiv = document.createElement("div");
-    movieInfoDiv.id = 'movieInfoDiv';
+    // movieInfoDiv.id = 'movieInfoDiv';
+    movieInfoDiv.id = 'ramdonMovieInfoDiv';
+    const infoDivFlex = document.createElement('div');
+   
+
     // const genreDivEl = document.createElement('div')
     // genreDivEl.id = 'genreDivStyle';
 
     console.log(movie.results[`${randomNumber}`]);
     createAndAppendElement('img',imageBaseUrl + movie.results[`${randomNumber}`].poster_path, movieInfoDiv);
-    createAndAppendElement('h3', movie.results[`${randomNumber}`].title,movieInfoDiv);
-    createAndAppendElement('p', movie.results[`${randomNumber}`].overview,movieInfoDiv);
+    movieInfoDiv.append(infoDivFlex);
+
+    createAndAppendElement('h3', movie.results[`${randomNumber}`].title,infoDivFlex);
+    createAndAppendElement('span', movie.results[`${randomNumber}`].overview,infoDivFlex);
+    
     // movieInfoDiv.append(genreDivEl);
     // createGenreElement(genreDivEl);
-    createGenreElement(movieInfoDiv);
+    createGenreElement(infoDivFlex);
     for (const genreList of movie.results[`${randomNumber}`].genre_ids) {
         // console.log(genreList);
         genreFetch(genreList).then((getGenre) => {
@@ -135,9 +142,9 @@ export function displayRandomMovie(movie) {
             //console.log(genreArr.id);
             if (genreArr.id === genreList) {
               //   console.log(genreArr.name);
-              const genreId = document.createElement("p");
-              genreId.innerText = genreArr.name;
-              movieInfoDiv.append(genreId);
+              const genreId = document.createElement("span");
+              genreId.innerText =  ' '+ genreArr.name + ' '
+              infoDivFlex.append(genreId);
             }
           }
         });
@@ -148,6 +155,7 @@ export function displayRandomMovie(movie) {
 
 function createNoImageElement(image, append) {
   const noImage = document.createElement("img");
+  noImage.id = 'whenMovieHasNoImage';
   noImage.src = image;
   append.append(noImage);
 }
