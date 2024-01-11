@@ -10,9 +10,9 @@
 
 /* Darkmode slider */
 .dmBtn {
-	width: 30px;
+	max-width: 30px;
 	height: auto;
-	margin-bottom: 20px;
+	padding-bottom: 25px;
 }
 #switch[type="checkbox"] {
 	height: 0;
@@ -23,8 +23,8 @@
 label {
 	cursor: pointer;
 	text-indent: -9999px;
-	width: 20vw;
-	height: 10vw;
+	width: 78px;
+	height: 39px;
 	background: grey;
 	display: block;
 	border-radius: 100px;
@@ -34,10 +34,10 @@ label {
 label:after {
 	content: "";
 	position: absolute;
-	top: 5px;
+	top: 2.5px;
 	left: 5px;
-	width: 9vw;
-	height: 9vw;
+	width: 35px;
+	height: 35px;
 	background: #fff;
 	border-radius: 90px;
 	transition: 0.3s;

@@ -19,7 +19,6 @@ formEl.addEventListener("submit", (event) => {
 function darkMode() {
 	let darkModeBody = document.body;
 	darkModeBody.classList.toggle("darkmode");
-	preventDefault();
 }
 function changeSvgs() {
 	const contactUs = document.querySelector(".callUs");
