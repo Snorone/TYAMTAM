@@ -20,9 +20,9 @@ body {
 	padding-left: 4px;
 }
 
-img {
+/* img {
 	width: 95%;
-}
+} */
 
 .coverImg {
 	width: 100vw;
@@ -66,15 +66,15 @@ input {
 	margin-top: 10px;
 }
 #movieInfoDiv p {
-	text-align: left;
+	/* text-align: left; */
 	padding: 10px;
 }
-#genreDivStyle {
+/* #genreDivStyle {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	gap: 10px;
-}
+} */
 
 #genreDivStyle p {
 	padding: 0;
@@ -376,6 +376,12 @@ a{
   margin: 5px;
 }
 
+img{
+  width: 400px;
+}
+.contact-box img{
+  width: 400px;
+}
 }
 /* dkjsnf */
 
