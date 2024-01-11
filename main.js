@@ -10,35 +10,29 @@ randomTopRatedFetch(randomPage).then(displayRandomTopRated);
 
 const formEl = document.querySelector("form");
 formEl.addEventListener("submit", (event) => {
-	const userInput = document.querySelector("#userInput").value;
-	event.preventDefault();
-	fetchInfo(userInput).then(displayMovie);
-	formEl.reset();
+  const userInput = document.querySelector("#userInput").value;
+  event.preventDefault();
+  fetchInfo(userInput).then(displayMovie);
+  formEl.reset();
 });
 // ! start melker
 function darkMode() {
-	let darkModeBody = document.body;
-	darkModeBody.classList.toggle("darkmode");
-	preventDefault();
+  let darkModeBody = document.body;
+  darkModeBody.classList.toggle("darkmode");
+  preventDefault();
 }
 function changeSvgs() {
-	const contactUs = document.querySelector(".callUs");
-	const chatNow = document.querySelector(".chatNow");
-	const getStarted = document.querySelector(".getStarted");
-	contactUs.src = "";
-	chatNow.src = "";
-	getStarted.src = "";
+  const contactUs = document.querySelector(".callUs");
+  const chatNow = document.querySelector(".chatNow");
+  const getStarted = document.querySelector(".getStarted");
+  contactUs.src = "";
+  chatNow.src = "";
+  getStarted.src = "";
 }
 
 const darkModeBtn = document.querySelector("#switch");
 darkModeBtn.addEventListener("click", (event) => {
-	darkMode();
-	changeSvgs();
-	event.preventDefault();
-});
-
-// ! slut melker
-//menyburgare. Problem att fungera dock//
-document.getElementById("menuIcon").addEventListener("click", () => {
-	document.getElementById("menuList").classList.add("show");
+  darkMode();
+  changeSvgs();
+  event.preventDefault();
 });
