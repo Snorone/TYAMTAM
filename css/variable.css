@@ -7,20 +7,18 @@
 /* Link to Light mode: https://coolors.co/d9d9d9-d63d41-eb5732-53373c-7abaed */
 /* Link to Dark mode: https://coolors.co/968f8e-4f4443-dd5c5f-7d7574-aad1f3 */
 
-
 :root {
-    --light-red: #d63d41; 
-    --light-grey: #d9d9d9;
-    --light-brown: #53373c;
-    --light-blue: #7abaed;
-    --light-orange: #eb5732;
-  
-    --dark-red: #dd5c5f;
-    --dark-lightgrey: #968f8e;
-    --dark-grey: #7d7574;
-    --dark-blue: #aad1f3;
-    --dark-black: #4f4443;
-  }
-  
-  
-  
+	--light-red: #d63d41;
+	--light-grey: #d9d9d9;
+	--light-brown: #53373c;
+	--light-blue: #7abaed;
+	--light-orange: #eb5732;
+	--header-color: #d63d41;
+	--background: white;
+
+	--dark-red: #dd5c5f;
+	--dark-lightgrey: #968f8e;
+	--dark-grey: #7d7574;
+	--dark-blue: #aad1f3;
+	--dark-black: #4f4443;
+}

@@ -1,79 +1,52 @@
-/* lightmode */
-:root {
-  --lightgray: #d9d9d9;
-  --red: #d63d41;
-  --orange: #eb5732;
-  --dark: #53373c;
-  --blue: #7abaed;
-  --body: white;
-}
-/* darkmode */
 .darkmode {
-  --lightgray: #d9d9d9;
-  --red: #d63d41;
-  --orange: #dd5c5f;
-  --dark: #53373c;
-  --blue: #aad1f3;
-  --body: #241817;
+	--light-red: #d63d41;
+	--light-grey: #968f8e;
+	--light-brown: #4f4443;
+	--light-blue: #aad1f3;
+	--light-orange: #dd5c5f;
+	--header-color: #4f4443;
+	--background: #241817;
 }
 
-/* Darkmode Slider */
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
+/* Darkmode slider */
+input[type="checkbox"] {
+	height: 0;
+	width: 0;
+	visibility: hidden;
 }
 
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
+label {
+	cursor: pointer;
+	text-indent: -9999px;
+	width: 200px;
+	height: 100px;
+	background: grey;
+	display: block;
+	border-radius: 100px;
+	position: relative;
 }
 
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
+label:after {
+	content: "";
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	width: 90px;
+	height: 90px;
+	background: #fff;
+	border-radius: 90px;
+	transition: 0.3s;
 }
 
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
+input:checked + label {
+	background: #bada55;
 }
 
-input:checked + .slider {
-  background-color: #2196f3;
+input:checked + label:after {
+	left: calc(100% - 5px);
+	transform: translateX(-100%);
 }
 
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196f3;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
+label:active:after {
+	width: 130px;
 }
