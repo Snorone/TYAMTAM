@@ -92,14 +92,24 @@ header {
 
 footer {
 	width: 100vw;
-	height: 50px;
+	height: 30px;
+  padding-bottom: 40px;
 	background-color: #53373c;
 	position: relative;
 	bottom: 0px;
-	display: flex;
+	
 	justify-content: space-around;
 	align-items: center;
 	margin-top: 20px;
+}
+
+#test{
+  display: flex;
+  gap: 10px;
+	align-items: center;
+  justify-content: center;
+  
+
 }
 
 .socialMedia {
