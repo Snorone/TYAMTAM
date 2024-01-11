@@ -24,9 +24,9 @@ function changeSvgs() {
 	const contactUs = document.querySelector(".callUs");
 	const chatNow = document.querySelector(".chatNow");
 	const getStarted = document.querySelector(".getStarted");
-	contactUs.src = "";
-	chatNow.src = "";
-	getStarted.src = "";
+	contactUs.src = "./assets/call-dark.svg";
+	chatNow.src = "./assets/chatt-dark.svg";
+	getStarted.src = "./assets/mail-dark.svg";
 }
 
 const darkModeBtn = document.querySelector("#switch");

@@ -1,78 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="./assets/icon.ico" type="image/x-icon">
-    <script src="./random.js" type="module"></script>
-    <link rel="stylesheet" href="./css/style.css" />
-    <!-- <link rel="stylesheet" href="./css/random.css" /> -->
-    <title>Random</title>
-  </head>
-  <body>
-    <header>
-      <!--vänster-->
-      <div>
-        <a href="index.html"
-          ><img id="logo" src="./assets/logo.png" alt="logo"
-        /></a>
-      </div>
-      <nav>
-        <div id="menuToggle">
-          <input type="checkbox" />
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="./assets/icon.ico" type="image/x-icon" />
+		<script src="./random.js" type="module"></script>
+		<link rel="stylesheet" href="./css/style.css" />
+		<link rel="stylesheet" href="./css/darkmode.css" />
+		<script src="./main.js" type="module"></script>
 
-          <span></span>
-          <span></span>
-          <span></span>
+		<!-- <link rel="stylesheet" href="./css/random.css" /> -->
+		<title>Random</title>
+	</head>
+	<body>
+		<header>
+			<!--vänster-->
+			<div>
+				<a href="index.html"
+					><img id="logo" src="./assets/logo.png" alt="logo"
+				/></a>
+			</div>
+			<nav>
+				<div id="menuToggle">
+					<input type="checkbox" />
 
-          <ul id="menu">
-            <a href="./index.html"><li>Home</li></a>
-            <a href="./random.html"><li>Random</li></a>
-            <a href="./about.html"><li>About</li></a>
-            <a href="./contact.html"><li>Contact</li></a>
-          </ul>
-        </div>
-      </nav>
-      <nav class="menu-desktop">
-        <!--höger-->
-        <a href="./index.html">Home</a>
-        <a href="./random.html">Random</a>
-        <a href="./about.html">About us</a>
-        <a href="./contact.html">Contact</a>
-      </nav>
-    </header>
-    <main class="contact-container">
-      <div class="cover-box">
-        <img src="./assets/contact.png" class="coverImg" alt="" />
-        <h1 class="cover-text">Random movie</h1>
-      </div>
-      <!--sökruta-->
-      <form>
-        <!-- <input type="text" id="userInput" placeholder="search for a person or movie!" /> -->
-        <button id="randomBtn" role="button">Random</button>
-      </form>
+					<span></span>
+					<span></span>
+					<span></span>
 
-      <!--bild och text-->
-      <div id="mainContainer">
-        <div id="flexContainer"></div>
-      </div>
-    </main>
+					<ul id="menu">
+						<a href="./index.html"><li>Home</li></a>
+						<a href="./random.html"><li>Random</li></a>
+						<a href="./about.html"><li>About</li></a>
+						<a href="./contact.html"><li>Contact</li></a>
+					</ul>
+				</div>
+			</nav>
+			<nav class="menu-desktop">
+				<!--höger-->
+				<a href="./index.html">Home</a>
+				<a href="./random.html">Random</a>
+				<a href="./about.html">About us</a>
+				<a href="./contact.html">Contact</a>
+			</nav>
+		</header>
+		<main class="contact-container">
+			<div class="cover-box">
+				<img src="./assets/contact.png" class="coverImg" alt="" />
+				<h1 class="cover-text">Random movie</h1>
+			</div>
+			<!--sökruta-->
+			<form>
+				<!-- <input type="text" id="userInput" placeholder="search for a person or movie!" /> -->
+				<button id="randomBtn" role="button">Random</button>
+			</form>
 
-    <footer id="footerRandom">
-      <div class="socialMediaDiv">
-        <a href=""
-          ><img class="socialMedia" src="./assets/Mask group-1.svg" alt=""
-        /></a>
-        <a href=""
-          ><img class="socialMedia" src="./assets/Mask group-2.svg" alt=""
-        /></a>
-        <a href=""
-          ><img class="socialMedia" src="./assets/Mask group-3.svg" alt=""
-        /></a>
-        <a href=""
-          ><img class="socialMedia" src="./assets/Mask group.svg" alt=""
-        /></a>
-      </div>
-    </footer>
-  </body>
+			<!--bild och text-->
+			<div id="mainContainer">
+				<div id="flexContainer"></div>
+			</div>
+		</main>
+
+		<footer id="footerRandom">
+			<div id="flexFooter">
+				<a href=""
+					><img class="socialMedia" src="./assets/Mask group-1.svg" alt="X"
+				/></a>
+				<a href=""
+					><img
+						class="socialMedia"
+						src="./assets/Mask group-2.svg"
+						alt="Facebook"
+				/></a>
+				<a href=""
+					><img
+						class="socialMedia"
+						src="./assets/Mask group-3.svg"
+						alt="Instagram"
+				/></a>
+				<a href=""
+					><img class="socialMedia" src="./assets/Mask group.svg" alt="Github"
+				/></a>
+				<div class="dmBtn">
+					<input type="checkbox" id="switch" /><label for="switch"
+						>Toggle</label
+					>
+				</div>
+			</div>
+		</footer>
+	</body>
 </html>
