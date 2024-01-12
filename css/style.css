@@ -34,7 +34,7 @@ body {
 }
 
 .coverImg {
-	width: 100vw;
+	width: 100%;
 }
 
 .headTitle {
@@ -374,7 +374,8 @@ a:hover {
 		width: 30%;
 	}
 	.coverImg {
-		height: 200px;
+   height: 200px;
+   width: 100%;
 	}
 	.cover-text {
 		font-size: 2.5rem;
