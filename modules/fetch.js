@@ -12,19 +12,12 @@ export async function fetchInfo(userSearch, randomPage) {
   console.log(userSearch);
   let url = `https://api.themoviedb.org/3/search/multi?query=${userSearch}&include_adult=false&language=en-US&page=1`;
 
-  // if (userSearch === "randomBtn") {
-  //   url = `https://api.themoviedb.org/3/movie/popular?language=en-US&page=${randomPage}`;
-  //   console.log(url);
-  // }
-  // console.log(url);
   const mainDivEl = document.querySelector('#mainContainer');
-  // const flexContainerEl = document.querySelector('#flexContainer');
   mainDivEl.innerHTML = '';
 
   const response = await fetch(url, options);
   if (response.ok) {
     const data = await response.json();
-    // console.log(data);
     if (data.results.length == 0) {
       console.log('hej');
       const h2El = document.createElement("h2");
@@ -42,7 +35,6 @@ export async function randomTopRatedFetch(randomPage){
   console.log(url);
   const response = await fetch(url, options);
   const data = await response.json();
-  //console.log(data);
   return data;
 }
 export async function randomFetch(userSearch) {
@@ -51,7 +43,6 @@ export async function randomFetch(userSearch) {
   console.log(url);
   const response = await fetch(url, options);
   const data = await response.json();
-  //console.log(data);
   return data;
 }
 
@@ -59,6 +50,5 @@ export async function genreFetch() {
   const url = `https://api.themoviedb.org/3/genre/movie/list?language=en`;
   const response = await fetch(url, options);
   const data = await response.json();
-  //console.log(data);
   return data;
 }

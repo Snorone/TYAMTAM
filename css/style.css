@@ -20,10 +20,6 @@ body {
 	padding-left: 4px;
 }
 
-/* img {
-	width: 95%;
-} */
-
 .coverImg {
 	width: 100vw;
 }
@@ -89,17 +85,6 @@ input {
   padding: 10px;
 }
 
-
-/* #genreDivStyle {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	gap: 10px;
-} */
-
-/* #genreDivStyle p {
-	padding: 0;
-} */
 header {
 	width: 100vw;
 	height: 50px;
@@ -164,13 +149,7 @@ a:hover {
 	font-weight: 400;
 	line-height: normal;
 }
-/* .contact-container {
-	display: flex;
-	flex-flow: column nowrap;
-	justify-content: space-around;
-	align-items: center;
-	gap: 30px;
-} */
+
 
 .contact-box {
   margin: auto;
@@ -398,10 +377,6 @@ nav{
 a{
   margin: 5px;
 }
-/* 
-img{
-  width: 200px;
-} */
 
 #movieInfoDiv {
 	box-sizing: border-box;
@@ -510,7 +485,6 @@ img{
   margin-bottom: 50px;
 }
 }
-/* dkjsnf */
 
 
 

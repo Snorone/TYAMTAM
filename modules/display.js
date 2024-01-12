@@ -1,7 +1,5 @@
 import { genreFetch } from "./fetch.js";
 
-// const emptyDiv = document.createElement("div");
-// const imageBaseUrl = `https://image.tmdb.org/t/p/original/`;
 const imageBaseUrl = `https://image.tmdb.org/t/p/w400/`;
 
 const mainDivEl = document.querySelector('#mainContainer');
@@ -36,13 +34,9 @@ function displayMovie(movie) {
       }
 
       for (const genreList of movieList.genre_ids) {
-        // console.log(genreList);
         genreFetch(genreList).then((getGenre) => {
-          //console.log(id);
           for (const genreArr of getGenre.genres) {
-            //console.log(genreArr.id);
             if (genreArr.id === genreList) {
-              //   console.log(genreArr.name);
               const genreId = document.createElement("p");
               genreId.innerText = genreArr.name;
               movieInfoDiv.append(genreId);
@@ -76,26 +70,17 @@ export function displayRandomTopRated(movie){
         console.log(i);
         const movieInfoDiv = document.createElement("div");
         movieInfoDiv.id = 'movieInfoDiv';
-        // const genreDivEl = document.createElement('div')
-        // genreDivEl.id = 'genreDivStyle';
-        // console.log(genreDivEl.id);
-
+     
         const moviePoster = movie.results[i].poster_path;
         console.log(moviePoster);
         createAndAppendElement('img',imageBaseUrl +moviePoster, movieInfoDiv);
         createAndAppendElement('h3', movie.results[i].title, movieInfoDiv);
 
-        // movieInfoDiv.append(genreDivEl);
         createGenreElement(movieInfoDiv);
-        // createGenreElement(genreDivEl);
         for (const genreList of movie.results[i].genre_ids) {
-          // console.log(genreList);
           genreFetch(genreList).then((getGenre) => {
-            //console.log(id);
             for (const genreArr of getGenre.genres) {
-              //console.log(genreArr.id);
               if (genreArr.id === genreList) {
-                //   console.log(genreArr.name);
                 const genreId = document.createElement("p");
                 genreId.innerText = genreArr.name;
                 movieInfoDiv.append(genreId);
@@ -112,18 +97,12 @@ export function displayRandomTopRated(movie){
 
 export function displayRandomMovie(movie) {
     flexContainerEl.innerHTML = "";
-    // console.log(movie.results[0]);
     const randomNumber = Math.floor(Math.random() * 20);
     console.log(randomNumber);
     const movieInfoDiv = document.createElement("div");
-    // movieInfoDiv.id = 'movieInfoDiv';
     movieInfoDiv.id = 'ramdonMovieInfoDiv';
     const infoDivFlex = document.createElement('div');
    
-
-    // const genreDivEl = document.createElement('div')
-    // genreDivEl.id = 'genreDivStyle';
-
     console.log(movie.results[`${randomNumber}`]);
     createAndAppendElement('img',imageBaseUrl + movie.results[`${randomNumber}`].poster_path, movieInfoDiv);
     movieInfoDiv.append(infoDivFlex);
@@ -131,17 +110,11 @@ export function displayRandomMovie(movie) {
     createAndAppendElement('h3', movie.results[`${randomNumber}`].title,infoDivFlex);
     createAndAppendElement('span', movie.results[`${randomNumber}`].overview,infoDivFlex);
     
-    // movieInfoDiv.append(genreDivEl);
-    // createGenreElement(genreDivEl);
     createGenreElement(infoDivFlex);
     for (const genreList of movie.results[`${randomNumber}`].genre_ids) {
-        // console.log(genreList);
         genreFetch(genreList).then((getGenre) => {
-          //console.log(id);
           for (const genreArr of getGenre.genres) {
-            //console.log(genreArr.id);
             if (genreArr.id === genreList) {
-              //   console.log(genreArr.name);
               const genreId = document.createElement("span");
               genreId.innerText =  ' '+ genreArr.name + ' '
               infoDivFlex.append(genreId);
