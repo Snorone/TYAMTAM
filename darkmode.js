@@ -20,7 +20,6 @@ function lmSvgFunc() {
 const darkModeBtn = document.querySelector("#switch");
 
 const prefersDarkTheme = window.matchMedia("(prefers-color-scheme: dark)");
-// const currentTheme = localStorage.getItem("theme");
 let theme = "light";
 if (prefersDarkTheme.matches) {
   darkModeBody.classList.add("darkmode");

@@ -1,59 +1,59 @@
 .darkmode {
-	--light-red: #d63d41;
-	--light-grey: #968f8e;
-	--light-brown: #4f4443;
-	--light-blue: #aad1f3;
-	--light-orange: #dd5c5f;
-	--header-color: #4f4443;
-	--background: #241817;
-	--text-color: white;
-	--text-button: black;
+  --light-red: #d63d41;
+  --light-grey: #968f8e;
+  --light-brown: #4f4443;
+  --light-blue: #aad1f3;
+  --light-orange: #dd5c5f;
+  --header-color: #4f4443;
+  --background: #241817;
+  --text-color: white;
+  --text-button: black;
 }
 
 /* Darkmode slider */
 .dmBtn {
-	max-width: 30px;
-	height: auto;
-	padding-bottom: 25px;
+  max-width: 30px;
+  height: auto;
+  padding-bottom: 25px;
 }
 #switch[type="checkbox"] {
-	height: 0;
-	width: 0;
-	visibility: hidden;
+  height: 0;
+  width: 0;
+  visibility: hidden;
 }
 
 label {
-	cursor: pointer;
-	text-indent: -9999px;
-	width: 78px;
-	height: 39px;
-	background: grey;
-	display: block;
-	border-radius: 100px;
-	position: relative;
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 78px;
+  height: 39px;
+  background: grey;
+  display: block;
+  border-radius: 100px;
+  position: relative;
 }
 
 label:after {
-	content: "";
-	position: absolute;
-	top: 2.5px;
-	left: 5px;
-	width: 35px;
-	height: 35px;
-	background: #fff;
-	border-radius: 90px;
-	transition: 0.3s;
+  content: "";
+  position: absolute;
+  top: 2.5px;
+  left: 5px;
+  width: 35px;
+  height: 35px;
+  background: #fff;
+  border-radius: 90px;
+  transition: 0.3s;
 }
 
 input:checked + label {
-	background: #1f2116;
+  background: #1f2116;
 }
 
 input:checked + label:after {
-	left: calc(100% - 5px);
-	transform: translateX(-100%);
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
 }
 
 label:active:after {
-	width: 13vw;
+  width: 10px;
 }
