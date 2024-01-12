@@ -12,6 +12,7 @@ formEl.addEventListener("submit", (event) => {
 	event.preventDefault();
 	fetchInfo(userInput).then(displayMovie);
 	formEl.reset();
+	let footer = document.querySelector("footer").style.position = "relative";
 });
 // ! start melker
 // function darkMode() {
